@@ -18,6 +18,7 @@
             --highlight: #dbeafe;
             --success: #4ade80;
             --shadow: rgba(0,0,0,0.35);
+            --promo: #fbbf24;
         }
 
         * { box-sizing: border-box; }
@@ -64,9 +65,7 @@
             font-size: 0.86rem;
         }
 
-        .brand span {
-            color: var(--accent-2);
-        }
+        .brand span { color: var(--accent-2); }
 
         .nav-actions {
             display: flex;
@@ -137,9 +136,7 @@
             letter-spacing: -0.05em;
         }
 
-        .headline-accent {
-            color: var(--accent-2);
-        }
+        .headline-accent { color: var(--accent-2); }
 
         .subhead {
             margin: 1.25rem 0 1.8rem;
@@ -300,12 +297,37 @@
 
         .includes-list li + li { margin-top: 8px; }
 
-        .price {
+        .price-wrap {
             margin-top: auto;
+            margin-bottom: 18px;
+        }
+
+        .discount-badge {
+            display: inline-block;
+            background: rgba(251,191,36,0.12);
+            color: var(--promo);
+            border: 1px solid rgba(251,191,36,0.35);
+            border-radius: 999px;
+            padding: 0.35rem 0.7rem;
+            font-size: 0.7rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .price {
             font-size: 2rem;
             font-weight: 800;
             letter-spacing: -0.05em;
-            margin-bottom: 18px;
+            line-height: 1.1;
+        }
+
+        .price small {
+            color: var(--muted);
+            font-size: 0.7rem;
+            text-decoration: line-through;
+            margin-left: 6px;
         }
 
         .cta-inline {
@@ -318,6 +340,18 @@
             background: rgba(78,161,255,0.06);
             color: var(--highlight);
             font-weight: 700;
+        }
+
+        .payfast-form {
+            margin-top: auto;
+        }
+
+        .payfast-form input[type="image"] {
+            width: 100%;
+            max-width: 240px;
+            border-radius: 12px;
+            display: block;
+            cursor: pointer;
         }
 
         .reasons {
@@ -356,6 +390,43 @@
             color: var(--muted);
         }
 
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(240px, 1fr));
+            gap: 22px;
+            margin-top: 18px;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 22px;
+            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+        }
+
+        .stars {
+            color: var(--promo);
+            letter-spacing: 0.12em;
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+
+        .testimonial-card p {
+            color: var(--muted);
+            margin: 0 0 18px;
+        }
+
+        .person {
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .person span {
+            color: var(--accent-2);
+            font-weight: 500;
+        }
+
         .cta-strip {
             margin: 42px 0 72px;
             padding: 24px;
@@ -390,7 +461,8 @@
         @media (max-width: 900px) {
             .hero-grid,
             .services,
-            .reasons {
+            .reasons,
+            .testimonials {
                 grid-template-columns: 1fr;
             }
 
@@ -515,8 +587,21 @@
                             <li>Local SEO strategy blueprint tailored to your market.</li>
                         </ul>
                     </div>
-                    <div class="price">R 3 700,00</div>
-                    <a class="cta-inline" href="https://wa.me/p/38387236564255774/27713793251">Secure via WhatsApp</a>
+
+                    <div class="price-wrap">
+                        <div class="discount-badge">Limited-time offer</div>
+                        <div class="price">R 1 599 <small>R 3 700</small></div>
+                    </div>
+
+                    <form class="payfast-form" name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
+                        <input required type="hidden" name="cmd" value="_paynow">
+                        <input required type="hidden" name="receiver" value="37123719">
+                        <input type="hidden" name="return_url" value="https://barahbasha.co.za/thank-you.html">
+                        <input required type="hidden" name="amount" value="1599.00">
+                        <input required type="hidden" name="item_name" maxlength="255" value="Local Footprint Blueprint">
+                        <input type="hidden" name="item_description" maxlength="255" value="Local Footprint Blueprint: Full local SEO audit, competitor analysis, and growth strategy for your Google Maps visibility">
+                        <input type="image" src="https://my.payfast.io/images/buttons/BuyNow/Primary-Large-BuyNow.png" alt="Buy Now" title="Buy Now with PayFast" />
+                    </form>
                 </article>
 
                 <article class="service-card">
@@ -533,64 +618,4 @@
                         </ul>
                     </div>
                     <div class="price">R 14 000,00</div>
-                    <a class="cta-inline" href="https://wa.me/p/28239626725700000/27713793251">Secure via WhatsApp</a>
-                </article>
-
-                <article class="service-card">
-                    <div>
-                        <h3>The Local Monopoly Retainer</h3>
-                        <p>Continuous local market insulation, ongoing optimization, and permanent lead infrastructure defense for elite South African service brands.</p>
-                        <div class="includes-title">What is included</div>
-                        <ul class="includes-list">
-                            <li>Automated review velocity loop deployment and reputation monitoring.</li>
-                            <li>Active local ranking defense and ongoing competitor map-spam mitigation.</li>
-                            <li>Continuous geo-targeted signal injections, Google posts, and photo tagging.</li>
-                            <li>Local organic landing page tracking and regular structural entity updates.</li>
-                            <li>Monthly executive local search performance and call volume auditing.</li>
-                        </ul>
-                    </div>
-                    <div class="price">R 15 000,00</div>
-                    <a class="cta-inline" href="https://wa.me/p/38390842580558904/27713793251">Secure via WhatsApp</a>
-                </article>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Why brands choose Barahbasha.</h2>
-            <p class="section-copy">We focus on the signals that move the needle: trust, local authority, relevance, and conversion readiness. Every campaign is built to help your business become the obvious choice in your local market.</p>
-
-            <div class="reasons">
-                <div class="reason">
-                    <div class="icon">01</div>
-                    <h4>Precision targeting</h4>
-                    <p>We identify exactly which local signals and location-based opportunities are influencing your ranking and revenue.</p>
-                </div>
-
-                <div class="reason">
-                    <div class="icon">02</div>
-                    <h4>Authority building</h4>
-                    <p>We strengthen your profile, citations, trust markers, and local SEO infrastructure so Google sees your business as the premium option.</p>
-                </div>
-
-                <div class="reason">
-                    <div class="icon">03</div>
-                    <h4>Conversion-ready systems</h4>
-                    <p>Visibility is only valuable if it produces enquiries. We align your local presence with call-ready conversion journeys.</p>
-                </div>
-            </div>
-        </section>
-
-        <div class="cta-strip">
-            <div>
-                <h3>Ready to own your local market?</h3>
-                <p>Turn search visibility into consistent, qualified lead flow.</p>
-            </div>
-            <a class="button" href="https://wa.me/p/38387236564255774/27713793251">Start your growth plan</a>
-        </div>
-    </main>
-
-    <footer>
-        &copy; 2026 MALEIBA (Pty) Ltd T/A BARAHBASHA. Direct EFT billing. All rights reserved.
-    </footer>
-</body>
-</html>
+                    <a class="cta-
