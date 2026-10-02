@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Thank you for your payment. Your Barahbasha Local Footprint Blueprint is being prepared." />
+    <title>Payment Confirmed — Barahbasha</title>
+    <style>
+        :root {
+            --bg-dark: #070b16;
+            --bg-mid: #0d1425;
+            --panel: #121d2e;
+            --text: #edf4ff;
+            --muted: #a9b8d1;
+            --accent: #4e8cff;
+            --accent-2: #74d7ff;
+            --line: rgba(255,255,255,0.08);
+            --success: #4ade80;
+        }
+
+        * { box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background:
+                radial-gradient(circle at top, rgba(78, 140, 255, 0.18), transparent 28%),
+                linear-gradient(180deg, #050a12 0%, var(--bg-dark) 100%);
+            color: var(--text);
+            line-height: 1.65;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            text-align: center;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 28px;
+            background: rgba(74, 222, 128, 0.15);
+            border: 2px solid var(--success);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            letter-spacing: -0.05em;
+            font-weight: 900;
+            margin: 0 0 16px;
+            background: linear-gradient(135deg, var(--text), var(--accent-2));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-2);
+            margin: 0 0 32px;
+            font-weight: 700;
+        }
+
+        .content {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--line);
+            border-radius: 22px;
+            padding: 32px;
+            margin-bottom: 32px;
+        }
+
+        .content p {
+            color: var(--muted);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin: 0 0 18px;
+        }
+
+        .content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(74, 222, 128, 0.08), rgba(116, 215, 255, 0.06));
+            border: 1px solid rgba(74, 222, 128, 0.35);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 24px 0;
+        }
+
+        .highlight-box strong {
+            color: var(--success);
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-size: 0.98rem;
+        }
+
+        .next-steps {
+            background: rgba(78, 140, 255, 0.08);
+            border: 1px solid rgba(78, 140, 255, 0.35);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 24px 0;
+            text-align: left;
+        }
+
+        .next-steps h3 {
+            margin: 0 0 14px;
+            font-size: 1.1rem;
+            color: var(--text);
+        }
+
+        .next-steps ol {
+            margin: 0;
+            padding-left: 20px;
+            color: var(--muted);
+        }
+
+        .next-steps li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--accent), #2967e8);
+            color: white;
+            border-radius: 12px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 16px 36px rgba(78, 140, 255, 0.22);
+            transition: transform 0.2s ease;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .contact-info {
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 1px solid var(--line);
+        }
+
+        .contact-info p {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin: 0 0 12px;
+        }
+
+        .whatsapp-link {
+            color: var(--accent-2);
+            font-weight: 700;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .whatsapp-link:hover {
+            color: var(--success);
+        }
+
+        @media (max-width: 560px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .success-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon">✓</div>
+        <h1>Payment Confirmed!</h1>
+        <p class="subtitle">Your Local Footprint Blueprint is being prepared.</p>
+
+        <div class="content">
+            <p>Thank you for investing in your local market dominance. Your payment has been successfully processed.</p>
+
+            <div class="highlight-box">
+                <strong>Special Offer Applied</strong>
+                <p>You've secured the Local Footprint Blueprint at our limited-time discounted rate of R1,599 (usually R3,700). That's a 57% savings on comprehensive local SEO strategy.</p>
+            </div>
+
+            <p>We're now preparing your customized audit and strategy report. Here's what happens next:</p>
+
+            <div class="next-steps">
+                <h3>Next Steps:</h3>
+                <ol>
+                    <li><strong>Audit Preparation (24–48 hours):</strong> We're running a comprehensive forensic analysis of your Google Business Profile, local citations, competitor landscape, and map-pack visibility.</li>
+                    <li><strong>Strategy Document:</strong> You'll receive a detailed PDF blueprint with findings, opportunities, and a step-by-step action plan tailored to your market.</li>
+                    <li><strong>WhatsApp Delivery:</strong> We'll send your report via WhatsApp for immediate access and to answer any questions.</li>
+                    <li><strong>Optional Next Step:</strong> If you're ready to execute the strategy, we'll discuss the Map-Pack Takeover Engine or Local Monopoly Retainer options.</li>
+                </ol>
+            </div>
+
+            <p><strong>Need to reach us sooner?</strong> Hit us up on WhatsApp — we're typically available within a few hours.</p>
+        </div>
+
+        <a href="https://wa.me/27713793251" class="cta-button">Message us on WhatsApp</a>
+
+        <div class="contact-info">
+            <p>Any questions about your report or next steps?</p>
+            <p><a href="https://wa.me/27713793251" class="whatsapp-link">Click here to message on WhatsApp</a></p>
+            <p style="font-size: 0.85rem; margin-top: 16px;">Invoice and receipt have been sent to your email.</p>
+        </div>
+
+        <div style="margin-top: 28px;">
+            <a href="https://barahbasha.co.za" style="color: var(--muted); text-decoration: none; font-size: 0.9rem;">← Back to Barahbasha</a>
+        </div>
+    </div>
+</body>
+</html>
