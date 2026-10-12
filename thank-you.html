@@ -1,244 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><style>
+@font-face {
+  font-family: "Optimistic";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Optimistic Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
+}
+:where(html) {
+  font-family: "Optimistic", system-ui, sans-serif;
+}
+:where(code, pre, kbd, samp) {
+  font-family: "Optimistic Mono", ui-monospace, monospace;
+}
+</style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Thank you for your payment. Your Barahbasha Local Footprint Blueprint is being prepared." />
-    <title>Payment Confirmed — Barahbasha</title>
+    <title>Thank You | Barahbasha - Local SEO Audit Confirmed</title>
+    <link rel="icon" type="image/png" href="/barahbasha_favicon.png">
     <style>
         :root {
-            --bg-dark: #070b16;
-            --bg-mid: #0d1425;
-            --panel: #121d2e;
-            --text: #edf4ff;
-            --muted: #a9b8d1;
-            --accent: #4e8cff;
-            --accent-2: #74d7ff;
-            --line: rgba(255,255,255,0.08);
+            --bg: #0c0d11;
+            --panel: #12151d;
+            --panel-2: #171b26;
+            --text: #eef3ff;
+            --muted: #a8b2c6;
+            --line: rgba(255,255,255,0.09);
+            --accent: #4ea1ff;
+            --accent-2: #8bc5ff;
+            --highlight: #dbeafe;
             --success: #4ade80;
+            --shadow: rgba(0,0,0,0.35);
+            --promo: #fbbf24;
         }
-
         * { box-sizing: border-box; }
-
-        html { scroll-behavior: smooth; }
-
         body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            margin:0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background:
-                radial-gradient(circle at top, rgba(78, 140, 255, 0.18), transparent 28%),
-                linear-gradient(180deg, #050a12 0%, var(--bg-dark) 100%);
+                radial-gradient(circle at top, rgba(78,161,255,0.22), transparent 28%),
+                linear-gradient(180deg, #0a0b10 0%, #0d1117 100%);
             color: var(--text);
-            line-height: 1.65;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            padding: 20px;
+            line-height:1.6;
+            min-height:100vh;
+            display:flex;
+            flex-direction:column;
         }
-
-        .container {
-            max-width: 700px;
-            text-align: center;
+        .container { width: min(800px, calc(100% - 32px)); margin:0 auto; }
+        .topbar { backdrop-filter: blur(14px); background: rgba(12,13,17,0.8); border-bottom:1px solid var(--line); padding:18px 0; }
+        .brand { display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; font-size:0.9rem; }
+        .brand-eye { width:32px; height:32px; position:relative; }
+        .brand-eye::before { content:''; position:absolute; inset:0; border:2px solid var(--accent-2); border-radius:50% 0 50% 0; transform:rotate(45deg); }
+        .brand-eye-inner { position:absolute; top:50%; left:50%; width:8px; height:8px; background:var(--accent-2); border-radius:50%; transform:translate(-50%,-50%); box-shadow:0 0 0 6px rgba(78,161,255,0.15); animation:pulse 2s infinite; }
+        @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(78,161,255,0.4)} 70%{box-shadow:0 0 0 10px rgba(78,161,255,0)} 100%{box-shadow:0 0 0 0 rgba(78,161,255,0)} }
+        .brand span { color:var(--accent-2); }
+        main { flex:1; padding:60px 0 40px; }
+        .success-badge {
+            display:inline-flex; align-items:center; gap:8px;
+            background: rgba(74,222,128,0.1); border:1px solid rgba(74,222,128,0.3);
+            color: var(--success); padding:8px 14px; border-radius:999px; font-size:0.8rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; margin-bottom:20px;
         }
-
-        .success-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 28px;
-            background: rgba(74, 222, 128, 0.15);
-            border: 2px solid var(--success);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
+        h1 { font-size: clamp(2.2rem, 4vw, 3.4rem); line-height:1; letter-spacing:-0.04em; margin:0 0 16px; }
+        h1 span { color: var(--accent-2); }
+        .sub { color:var(--muted); font-size:1.1rem; margin:0 0 28px; max-width:600px; }
+        .card {
+            background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+            border:1px solid var(--line); border-radius:22px; padding:26px; margin-bottom:22px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
         }
-
-        h1 {
-            font-size: 2.8rem;
-            letter-spacing: -0.05em;
-            font-weight: 900;
-            margin: 0 0 16px;
-            background: linear-gradient(135deg, var(--text), var(--accent-2));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            color: var(--accent-2);
-            margin: 0 0 32px;
-            font-weight: 700;
-        }
-
-        .content {
-            background: rgba(255,255,255,0.02);
-            border: 1px solid var(--line);
-            border-radius: 22px;
-            padding: 32px;
-            margin-bottom: 32px;
-        }
-
-        .content p {
-            color: var(--muted);
-            font-size: 1.05rem;
-            line-height: 1.7;
-            margin: 0 0 18px;
-        }
-
-        .content p:last-child {
-            margin-bottom: 0;
-        }
-
-        .highlight-box {
-            background: linear-gradient(135deg, rgba(74, 222, 128, 0.08), rgba(116, 215, 255, 0.06));
-            border: 1px solid rgba(74, 222, 128, 0.35);
-            border-radius: 16px;
-            padding: 20px;
-            margin: 24px 0;
-        }
-
-        .highlight-box strong {
-            color: var(--success);
-            display: block;
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-        }
-
-        .highlight-box p {
-            margin: 0;
-            font-size: 0.98rem;
-        }
-
-        .next-steps {
-            background: rgba(78, 140, 255, 0.08);
-            border: 1px solid rgba(78, 140, 255, 0.35);
-            border-radius: 16px;
-            padding: 20px;
-            margin: 24px 0;
-            text-align: left;
-        }
-
-        .next-steps h3 {
-            margin: 0 0 14px;
-            font-size: 1.1rem;
-            color: var(--text);
-        }
-
-        .next-steps ol {
-            margin: 0;
-            padding-left: 20px;
-            color: var(--muted);
-        }
-
-        .next-steps li {
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 14px 32px;
-            background: linear-gradient(135deg, var(--accent), #2967e8);
-            color: white;
-            border-radius: 12px;
-            font-weight: 700;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 16px 36px rgba(78, 140, 255, 0.22);
-            transition: transform 0.2s ease;
-            text-decoration: none;
-            font-size: 1rem;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-        }
-
-        .contact-info {
-            margin-top: 32px;
-            padding-top: 32px;
-            border-top: 1px solid var(--line);
-        }
-
-        .contact-info p {
-            color: var(--muted);
-            font-size: 0.95rem;
-            margin: 0 0 12px;
-        }
-
-        .whatsapp-link {
-            color: var(--accent-2);
-            font-weight: 700;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .whatsapp-link:hover {
-            color: var(--success);
-        }
-
-        @media (max-width: 560px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            .content {
-                padding: 20px;
-            }
-
-            .success-icon {
-                width: 70px;
-                height: 70px;
-                font-size: 2.5rem;
-            }
-        }
+        .card h3 { margin:0 0 12px; font-size:1.2rem; }
+        .card p, .card li { color:var(--muted); font-size:0.95rem; }
+        .card ul { padding-left:18px; margin:12px 0 0; }
+        .card li + li { margin-top:8px; }
+        .steps { display:grid; grid-template-columns: repeat(3,1fr); gap:14px; margin:20px 0; }
+        .step { background: var(--panel-2); border:1px solid var(--line); border-radius:14px; padding:16px; }
+        .step-num { width:28px; height:28px; border-radius:8px; background:rgba(78,161,255,0.15); color:var(--accent-2); display:grid; place-items:center; font-weight:800; font-size:0.8rem; margin-bottom:10px; }
+        .step strong { display:block; font-size:0.95rem; margin-bottom:4px; }
+        .step span { font-size:0.82rem; color:var(--muted); }
+        .cta-row { display:flex; gap:12px; flex-wrap:wrap; margin-top:22px; }
+        .button { display:inline-flex; align-items:center; justify-content:center; padding:0.9rem 1.3rem; border-radius:12px; font-weight:700; border:1px solid transparent; transition: transform 0.2s; text-decoration:none; }
+        .button-primary { background: linear-gradient(135deg, var(--accent), #2e7ae6); color:white; box-shadow:0 20px 40px rgba(78,161,255,0.24); }
+        .button-secondary { background: rgba(255,255,255,0.04); border-color:var(--line); color:var(--text); }
+        .button:hover { transform:translateY(-1px); }
+        .highlight-box { border:1px dashed rgba(78,161,255,0.3); background: rgba(78,161,255,0.06); border-radius:12px; padding:14px 16px; font-size:0.85rem; color:var(--highlight); margin-top:16px; }
+        footer { border-top:1px solid var(--line); padding:24px 0 40px; color:var(--muted); text-align:center; font-size:0.85rem; }
+        .footer-links { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin:12px 0; }
+        .footer-links a { color:var(--highlight); text-decoration:underline; text-underline-offset:4px; font-size:0.8rem; }
+        @media(max-width:600px){ .steps{grid-template-columns:1fr;} .cta-row .button{width:100%;} }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="success-icon">✓</div>
-        <h1>Payment Confirmed!</h1>
-        <p class="subtitle">Your Local Footprint Blueprint is being prepared.</p>
-
-        <div class="content">
-            <p>Thank you for investing in your local market dominance. Your payment has been successfully processed.</p>
-
-            <div class="highlight-box">
-                <strong>Special Offer Applied</strong>
-                <p>You've secured the Local Footprint Blueprint at our limited-time discounted rate of R1,599 (usually R3,700). That's a 57% savings on comprehensive local SEO strategy.</p>
-            </div>
-
-            <p>We're now preparing your customized audit and strategy report. Here's what happens next:</p>
-
-            <div class="next-steps">
-                <h3>Next Steps:</h3>
-                <ol>
-                    <li><strong>Audit Preparation (24–48 hours):</strong> We're running a comprehensive forensic analysis of your Google Business Profile, local citations, competitor landscape, and map-pack visibility.</li>
-                    <li><strong>Strategy Document:</strong> You'll receive a detailed PDF blueprint with findings, opportunities, and a step-by-step action plan tailored to your market.</li>
-                    <li><strong>WhatsApp Delivery:</strong> We'll send your report via WhatsApp for immediate access and to answer any questions.</li>
-                    <li><strong>Optional Next Step:</strong> If you're ready to execute the strategy, we'll discuss the Map-Pack Takeover Engine or Local Monopoly Retainer options.</li>
-                </ol>
-            </div>
-
-            <p><strong>Need to reach us sooner?</strong> Hit us up on WhatsApp — we're typically available within a few hours.</p>
-        </div>
-
-        <a href="https://wa.me/27713793251" class="cta-button">Message us on WhatsApp</a>
-
-        <div class="contact-info">
-            <p>Any questions about your report or next steps?</p>
-            <p><a href="https://wa.me/27713793251" class="whatsapp-link">Click here to message on WhatsApp</a></p>
-            <p style="font-size: 0.85rem; margin-top: 16px;">Invoice and receipt have been sent to your email.</p>
-        </div>
-
-        <div style="margin-top: 28px;">
-            <a href="https://barahbasha.co.za" style="color: var(--muted); text-decoration: none; font-size: 0.9rem;">← Back to Barahbasha</a>
+    <div class="topbar">
+        <div class="container">
+            <a href="/" class="brand"><div class="brand-eye"><div class="brand-eye-inner"></div></div>Barah<span>basha</span></a>
         </div>
     </div>
-</body>
+    <main>
+        <div class="container">
+            <div class="success-badge">✓ Payment Confirmed — PayFast</div>
+            <h1>You're in. We start <span>now.</span></h1>
+            <p class="sub">Thank you for securing the <strong>Local Footprint Blueprint</strong>. Your forensic audit is now queued — we see what others miss, and we start immediately. No refunds as agreed at checkout.</p>
+
+            <div class="card">
+                <h3>What happens next — 3 steps</h3>
+                <div class="steps">
+                    <div class="step"><div class="step-num">01</div><strong>Send details</strong><span>Email business name + Google Maps link + location to marketing@barahbasha.co.za within 24h</span></div>
+                    <div class="step"><div class="step-num">02</div><strong>We audit</strong><span>Full GBP diagnostic, competitor benchmark & map-pack opportunity scan (3-5 business days)</span></div>
+                    <div class="step"><div class="step-num">03</div><strong>You get growth engine</strong><span>PDF blueprint + Loom video + checklist fixes via email & WhatsApp</span></div>
+                </div>
+                <div class="highlight-box">⏱ <strong>Fast track:</strong> Already sent details? We start within 2 hours during business hours (SAST). Check your email for confirmation from marketing@barahbasha.co.za</div>
+                <div class="highlight-box" style="border-color: rgba(74,222,128,0.4); background: rgba(74,222,128,0.08); color:#d1fae5; margin-top:12px;">✅ <strong>If we have already reached out to you,</strong> your audit is ready and you will receive it <strong>within the hour</strong> via email & WhatsApp. Keep your phone close — we see what others miss.</div>
+            </div>
+
+            <div class="card">
+                <h3>Your order details</h3>
+                <ul>
+                    <li><strong>Product:</strong> Local Footprint Blueprint — R1 599 (Tier 1)</li>
+                    <li><strong>Delivery:</strong> 3-5 business days after we receive your business details</li>
+                    <li><strong>Refund policy:</strong> No refunds, all sales final — custom instant audit as per ECTA Section 16. Redelivery only if not delivered.</li>
+                    <li><strong>Support:</strong> marketing@barahbasha.co.za or WhatsApp via site</li>
+                </ul>
+            </div>
+
+            <div class="card" style="background: linear-gradient(135deg, rgba(78,161,255,0.12), rgba(255,255,255,0.02));">
+                <h3>Want to own the Top 3 faster?</h3>
+                <p>Your Blueprint finds the leaks. Our <strong>Map-Pack Takeover Engine (R14 000)</strong> fixes them — 50+ citations, entity optimisation & geo-signal sync. Most Blueprint clients upgrade within 7 days.</p>
+                <div class="cta-row">
+                    <a class="button button-primary" href="https://wa.me/p/28239626725700000/27713793251">Upgrade via WhatsApp</a>
+                    <a class="button button-secondary" href="/">Back to home</a>
+                </div>
+            </div>
+
+            <div style="text-align:center; margin-top:28px; color:var(--muted); font-size:0.85rem;">
+                <p>Need help? <a href="mailto:marketing@barahbasha.co.za" style="color:var(--accent-2); text-decoration:underline;">marketing@barahbasha.co.za</a> • We respond within 1 business day</p>
+                <p style="font-style:italic; color:var(--accent-2);">we see what others miss</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/#terms">Terms</a>
+                <a href="/#privacy">Privacy</a>
+                <a href="/#refund">Refund Policy</a>
+            </div>
+            &copy; 2026 MALEIBA (Pty) Ltd T/A BARAHBASHA. All rights reserved.<br>
+            Payment via PayFast • Direct EFT billing for larger packages
+        </div>
+    </footer>
+<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
 </html>
