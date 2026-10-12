@@ -1,32 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><style>
-@font-face {
-  font-family: "Optimistic";
-  font-style: normal;
-  font-weight: 400 600;
-  font-display: swap;
-  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Optimistic Mono";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
-}
-:where(html) {
-  font-family: "Optimistic", system-ui, sans-serif;
-}
-:where(code, pre, kbd, samp) {
-  font-family: "Optimistic Mono", ui-monospace, monospace;
-}
-</style>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Barahbasha helps South African service businesses rank higher on Google Maps and generate more qualified leads through local SEO and Google Business Profile optimisation. We see what others miss." />
     <title>Barahbasha | Local SEO & Growth Agency - We see what others miss</title>
-    <link rel="icon" type="image/png" href="/barahbasha_favicon.png">
     <style>
         :root {
             --bg: #0c0d11;
@@ -56,12 +34,7 @@
         }
         a { color: inherit; text-decoration: none; }
         .container { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
-        .topbar {
-            position: sticky; top: 0; z-index: 20;
-            backdrop-filter: blur(14px);
-            background: rgba(12, 13, 17, 0.8);
-            border-bottom: 1px solid var(--line);
-        }
+        .topbar { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(14px); background: rgba(12, 13, 17, 0.8); border-bottom: 1px solid var(--line); }
         .nav { display: flex; align-items: center; justify-content: space-between; min-height: 72px; }
         .brand { display:flex; align-items:center; gap:10px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.9rem; }
         .brand-eye { width:32px; height:32px; position:relative; }
@@ -70,12 +43,7 @@
         @keyframes pulse { 0%{ box-shadow:0 0 0 0 rgba(78,161,255,0.4)} 70%{ box-shadow:0 0 0 10px rgba(78,161,255,0)} 100%{ box-shadow:0 0 0 0 rgba(78,161,255,0)} }
         .brand span { color: var(--accent-2); }
         .nav-actions { display: flex; align-items: center; gap: 12px; }
-        .nav .button, .hero .button, .cta-strip .button {
-            display: inline-flex; align-items: center; justify-content: center;
-            padding: 0.9rem 1.3rem; border-radius: 12px; font-weight: 700;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-            border: 1px solid transparent;
-        }
+        .nav .button, .hero .button, .cta-strip .button { display: inline-flex; align-items: center; justify-content: center; padding: 0.9rem 1.3rem; border-radius: 12px; font-weight: 700; transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; border: 1px solid transparent; }
         .nav .button { background: rgba(255,255,255,0.04); border-color: var(--line); color: var(--text); }
         .hero .button, .cta-strip .button { background: linear-gradient(135deg, var(--accent), #2e7ae6); color: white; box-shadow: 0 20px 40px rgba(78,161,255,0.24); }
         .button:hover { transform: translateY(-1px); }
@@ -131,7 +99,6 @@
         .cta-strip { margin: 42px 0 42px; padding: 24px; background: linear-gradient(135deg, rgba(78,161,255,0.14), rgba(255,255,255,0.02)); border: 1px solid var(--line); border-radius: 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
         .cta-strip h3 { margin: 0 0 6px; font-size: clamp(1.6rem, 2vw, 2.3rem); letter-spacing: -0.04em; }
         .cta-strip p { margin: 0; color: var(--muted); }
-        /* Legal sections */
         .legal { padding: 60px 0; border-top: 1px solid var(--line); background: rgba(255,255,255,0.01); }
         .legal-block { background: var(--panel); border:1px solid var(--line); border-radius:20px; padding:32px; margin-bottom:28px; }
         .legal-block h2 { margin:0 0 6px; font-size:2rem; letter-spacing:-0.03em; }
@@ -144,11 +111,7 @@
         .footer-links a { color:var(--highlight); font-size:0.85rem; text-decoration:underline; text-underline-offset:4px; }
         .footer-tagline { font-style:italic; color:var(--accent-2); margin-top:8px; font-size:0.9rem; }
         @media (max-width: 900px) { .hero-grid, .services, .reasons, .testimonials { grid-template-columns: 1fr; } .hero { padding-top: 52px; } }
-        @media (max-width: 560px) {
-            .nav { padding: 8px 0; } .nav-actions { gap: 8px; } .nav .button { padding: 0.7rem 0.9rem; font-size: 0.8rem; }
-            .stats { grid-template-columns: 1fr; } .hero-actions { align-items: stretch; } .hero .button, .cta-strip .button { width: 100%; }
-            .legal-block { padding:22px; }
-        }
+        @media (max-width: 560px) { .nav { padding: 8px 0; } .nav-actions { gap: 8px; } .nav .button { padding: 0.7rem 0.9rem; font-size: 0.8rem; } .stats { grid-template-columns: 1fr; } .hero-actions { align-items: stretch; } .hero .button, .cta-strip .button { width: 100%; } .legal-block { padding:22px; } }
     </style>
 </head>
 <body>
@@ -162,7 +125,6 @@
             </div>
         </div>
     </div>
-
     <main class="container">
         <section class="hero">
             <div class="hero-grid">
@@ -187,7 +149,6 @@
                 </div>
             </div>
         </section>
-
         <section class="section" id="services">
             <h2 class="section-title">Local growth systems built for visibility.</h2>
             <p class="section-copy">We combine technical SEO, local rankings, and trust-building systems to help premium service businesses dominate their map-pack and convert more local demand into booked work.</p>
@@ -222,7 +183,6 @@
                 </article>
             </div>
         </section>
-
         <section class="section">
             <h2 class="section-title">Why brands choose Barahbasha.</h2>
             <p class="section-copy">We focus on the signals that move the needle: trust, local authority, relevance, and conversion readiness. Every campaign is built to help your business become the obvious choice in your local market.</p>
@@ -232,7 +192,6 @@
                 <div class="reason"><div class="icon">03</div><h4>Conversion-ready systems</h4><p>Visibility is only valuable if it produces enquiries. We align your local presence with call-ready conversion journeys.</p></div>
             </div>
         </section>
-
         <section class="section" id="testimonials">
             <h2 class="section-title">What our clients say</h2>
             <p class="section-copy">Results that speak for themselves — from service businesses that needed stronger local visibility.</p>
@@ -242,10 +201,7 @@
                 <div class="testimonial-card"><div class="stars">★★★★★</div><p>“We needed serious local market authority and they delivered it. The campaign was well structured, measurable, and highly effective.”</p><div class="person">Lisa K. <span>— HVAC Services</span></div></div>
             </div>
         </section>
-
         <div class="cta-strip"><div><h3>Ready to own your local market?</h3><p>Turn search visibility into consistent, qualified lead flow.</p></div><a class="button" href="https://wa.me/p/38387236564255774/27713793251">Start your growth plan</a></div>
-
-        <!-- LEGAL SECTIONS -->
         <section class="legal" id="legal">
             <div class="legal-block" id="terms">
                 <div class="legal-meta">Last updated: 9 May 2026 • MALEIBA (Pty) Ltd T/A BARAHBASHA</div>
@@ -273,7 +229,6 @@
                 <h3>7. Contact</h3>
                 <p>For any terms query: WhatsApp via site button or email marketing@barahbasha.co.za</p>
             </div>
-
             <div class="legal-block" id="privacy">
                 <div class="legal-meta">POPIA Compliant Privacy Policy</div>
                 <h2>Privacy Policy</h2>
@@ -299,7 +254,6 @@
                 <h3>Cookies</h3>
                 <p>We use only essential cookies for site function and PayFast. No third-party advertising cookies.</p>
             </div>
-
             <div class="legal-block" id="refund">
                 <div class="legal-meta">Refund, Cancellation & Delivery Policy • South Africa</div>
                 <h2>Refund, Cancellation & Delivery Policy</h2>
@@ -323,7 +277,6 @@
             </div>
         </section>
     </main>
-
     <footer>
         <div class="container">
             <div class="footer-links">
@@ -336,5 +289,5 @@
             <div class="footer-tagline">we see what others miss • barahbasha.co.za</div>
         </div>
     </footer>
-<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
+</body>
 </html>
