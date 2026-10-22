@@ -99,19 +99,29 @@
         .cta-strip { margin: 42px 0 42px; padding: 24px; background: linear-gradient(135deg, rgba(78,161,255,0.14), rgba(255,255,255,0.02)); border: 1px solid var(--line); border-radius: 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
         .cta-strip h3 { margin: 0 0 6px; font-size: clamp(1.6rem, 2vw, 2.3rem); letter-spacing: -0.04em; }
         .cta-strip p { margin: 0; color: var(--muted); }
+        
+        /* Modern Collapsible Legal Styles */
         .legal { padding: 60px 0; border-top: 1px solid var(--line); background: rgba(255,255,255,0.01); }
-        .legal-block { background: var(--panel); border:1px solid var(--line); border-radius:20px; padding:32px; margin-bottom:28px; }
-        .legal-block h2 { margin:0 0 6px; font-size:2rem; letter-spacing:-0.03em; }
-        .legal-block h3 { margin:28px 0 12px; color:var(--highlight); font-size:1.1rem; }
-        .legal-block p, .legal-block li { color:var(--muted); font-size:0.95rem; }
-        .legal-block ul { padding-left:18px; }
-        .legal-meta { color:var(--accent-2); font-size:0.8rem; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:12px; }
+        .legal-accordion { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; margin-bottom: 16px; overflow: hidden; transition: border-color 0.2s ease; }
+        .legal-accordion:hover { border-color: rgba(78,161,255,0.3); }
+        .legal-summary { list-style: none; padding: 24px 28px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; font-weight: 700; font-size: 1.25rem; color: var(--text); user-select: none; }
+        .legal-summary::-webkit-details-marker { display: none; }
+        .legal-summary::after { content: '▾'; font-size: 1.3rem; color: var(--accent-2); transition: transform 0.2s ease; }
+        details[open] .legal-summary::after { transform: rotate(180deg); }
+        details[open] .legal-summary { border-bottom: 1px solid var(--line); background: rgba(255,255,255,0.02); }
+        .legal-content { padding: 28px; }
+        .legal-content h3 { margin: 24px 0 10px; color: var(--highlight); font-size: 1.05rem; }
+        .legal-content h3:first-child { margin-top: 0; }
+        .legal-content p, .legal-content li { color: var(--muted); font-size: 0.95rem; }
+        .legal-content ul { padding-left: 18px; }
+        .legal-meta { color: var(--accent-2); font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px; }
+
         footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); text-align: center; }
         .footer-links { display:flex; gap:18px; justify-content:center; flex-wrap:wrap; margin:14px 0; }
         .footer-links a { color:var(--highlight); font-size:0.85rem; text-decoration:underline; text-underline-offset:4px; }
         .footer-tagline { font-style:italic; color:var(--accent-2); margin-top:8px; font-size:0.9rem; }
         @media (max-width: 900px) { .hero-grid, .services, .reasons, .testimonials { grid-template-columns: 1fr; } .hero { padding-top: 52px; } }
-        @media (max-width: 560px) { .nav { padding: 8px 0; } .nav-actions { gap: 8px; } .nav .button { padding: 0.7rem 0.9rem; font-size: 0.8rem; } .stats { grid-template-columns: 1fr; } .hero-actions { align-items: stretch; } .hero .button, .cta-strip .button { width: 100%; } .legal-block { padding:22px; } }
+        @media (max-width: 560px) { .nav { padding: 8px 0; } .nav-actions { gap: 8px; } .nav .button { padding: 0.7rem 0.9rem; font-size: 0.8rem; } .stats { grid-template-columns: 1fr; } .hero-actions { align-items: stretch; } .hero .button, .cta-strip .button { width: 100%; } .legal-content { padding: 18px; } .legal-summary { padding: 18px 20px; font-size: 1.1rem; } }
     </style>
 </head>
 <body>
@@ -202,79 +212,91 @@
             </div>
         </section>
         <div class="cta-strip"><div><h3>Ready to own your local market?</h3><p>Turn search visibility into consistent, qualified lead flow.</p></div><a class="button" href="https://wa.me/p/38387236564255774/27713793251">Start your growth plan</a></div>
+        
+        <!-- Collapsible Legal Section -->
         <section class="legal" id="legal">
-            <div class="legal-block" id="terms">
-                <div class="legal-meta">Last updated: 9 May 2026 • MALEIBA (Pty) Ltd T/A BARAHBASHA</div>
-                <h2>Terms & Conditions</h2>
-                <p>By accessing barahbasha.co.za and purchasing our services, you agree to these Terms. BARAHBASHA is a trading name of MALEIBA (Pty) Ltd, South Africa.</p>
-                <h3>1. Services</h3>
-                <p>We provide Local SEO services: Google Business Profile audits (Local Footprint Blueprint), citation building & entity optimisation (Map-Pack Takeover Engine), and ongoing local SEO retainer (Local Monopoly Retainer). All services are business-to-business.</p>
-                <h3>2. Payments & Billing</h3>
-                <ul>
-                    <li>Prices in South African Rand (ZAR). VAT inclusive where applicable.</li>
-                    <li>PayFast secure checkout for Blueprint (R1 599). Takeover Engine (R14 000) and Retainer (R15 000) billed via Direct EFT as stated in footer, or via WhatsApp invoice link.</li>
-                    <li>Retainer billed monthly in advance. Direct EFT billing – no automatic card debit unless agreed.</li>
-                </ul>
-                <h3>3. Client Responsibilities</h3>
-                <ul>
-                    <li>Provide accurate business details, Google Business Profile access, and timely feedback.</li>
-                    <li>Maintain NAP consistency after our cleanup; changes without notice may affect rankings.</li>
-                </ul>
-                <h3>4. No Guarantee of Rankings</h3>
-                <p>Local SEO depends on Google algorithms, competitor activity, and market factors outside our control. We do not guarantee specific rankings, traffic, or revenue, but we apply best-practice forensic methods – we see what others miss.</p>
-                <h3>5. Intellectual Property</h3>
-                <p>Audit reports, blueprints, and strategy documents are licensed for internal use by the purchasing business only, not for resale or distribution to other agencies.</p>
-                <h3>6. Governing Law</h3>
-                <p>These Terms are governed by the laws of the Republic of South Africa. Jurisdiction: Eastern Cape Division, Port Elizabeth.</p>
-                <h3>7. Contact</h3>
-                <p>For any terms query: WhatsApp via site button or email marketing@barahbasha.co.za</p>
-            </div>
-            <div class="legal-block" id="privacy">
-                <div class="legal-meta">POPIA Compliant Privacy Policy</div>
-                <h2>Privacy Policy</h2>
-                <p>BARAHBASHA respects your privacy and complies with the Protection of Personal Information Act (POPIA) of South Africa.</p>
-                <h3>What we collect</h3>
-                <ul>
-                    <li>Contact info you submit via WhatsApp links or PayFast checkout (name, phone, email, business name, address).</li>
-                    <li>Business profile data you authorise us to access (Google Business Profile, website URL).</li>
-                    <li>Anonymous analytics (page views, device type) for improving site performance.</li>
-                </ul>
-                <h3>How we use it</h3>
-                <ul>
-                    <li>To deliver audits, build citations, and provide local SEO services.</li>
-                    <li>To communicate via WhatsApp or email about your order and results.</li>
-                    <li>To send monthly retainer reports where applicable.</li>
-                </ul>
-                <h3>Sharing</h3>
-                <p>We do not sell your data. We share only with essential processors: PayFast (payments), Google (for GBP access), and local citation directories where you have approved listing. All processors are POPIA/GDPR aligned.</p>
-                <h3>Retention</h3>
-                <p>We retain audit data for 24 months for benchmarking, then anonymise. You may request deletion via marketing@barahbasha.co.za.</p>
-                <h3>Your rights</h3>
-                <p>Under POPIA you may request access, correction, or deletion of personal info. Contact us with your request and proof of identity.</p>
-                <h3>Cookies</h3>
-                <p>We use only essential cookies for site function and PayFast. No third-party advertising cookies.</p>
-            </div>
-            <div class="legal-block" id="refund">
-                <div class="legal-meta">Refund, Cancellation & Delivery Policy • South Africa</div>
-                <h2>Refund, Cancellation & Delivery Policy</h2>
-                <h3>1. Nature of Products</h3>
-                <p>Local Footprint Blueprint is a digital service – forensic audit + strategy blueprint delivered as PDF + Loom video via email/WhatsApp within 3-5 business days after payment and receipt of business details. Map-Pack Takeover and Retainer are services with work commencing after onboarding call.</p>
-                <h3>2. Local Footprint Blueprint (Tier 1 – R1 599) – No Refunds</h3>
-                <p><strong>All sales are final.</strong> The Local Footprint Blueprint is a custom, forensic digital audit where research begins immediately after payment. Due to the immediate allocation of analyst time and proprietary data costs, <strong>no refunds, cancellations, or exchanges</strong> are offered once payment is made, in line with Section 16 of ECTA for custom digital services.</p>
-                <p>By purchasing you agree to instant commencement of work. If you have not submitted business details, email marketing@barahbasha.co.za within 7 days to schedule delivery, or your order will be marked as abandoned with no refund.</p>
-                <h3>3. Takeover Engine & Retainer – Cancellation</h3>
-                <ul>
-                    <li>Takeover Engine (R14 000): 50% deposit non-refundable once citation build begins (directories incur costs). You may cancel before kickoff call for full refund minus R500 admin.</li>
-                    <li>Local Monopoly Retainer (R15 000/mo): Month-to-month. Cancel anytime with 14 days written notice before next billing cycle. No refund for current month already in progress, but work continues till end of cycle.</li>
-                </ul>
-                <h3>4. Delivery Issues</h3>
-                <p>If you do not receive your Blueprint within 5 business days after providing all info, contact marketing@barahbasha.co.za and we will redeliver within 24h. For Tier 1, redelivery is the sole remedy – no refund.</p>
-                <h3>5. EFT Billing</h3>
-                <p>All large packages billed via Direct EFT to MALEIBA (Pty) Ltd T/A BARAHBASHA. EFT details provided on invoice. Proof of payment to marketing@barahbasha.co.za secures start date.</p>
-                <h3>6. How to request</h3>
-                <p>WhatsApp us via site buttons or email marketing@barahbasha.co.za with: Order name, PayFast transaction ID or EFT date, reason. We respond within 1 business day per Consumer Protection Act.</p>
-                <p style="margin-top:20px;font-size:0.8rem;"><em>Compliant with CPA & ECTA. We see what others miss – including the fine print.</em></p>
-            </div>
+            <h2 class="section-title" style="margin-bottom: 24px;">Legal & Governance</h2>
+
+            <details class="legal-accordion" id="terms">
+                <summary class="legal-summary">Terms & Conditions</summary>
+                <div class="legal-content">
+                    <div class="legal-meta">Last updated: 9 May 2026 • MALEIBA (Pty) Ltd T/A BARAHBASHA</div>
+                    <p>By accessing barahbasha.co.za and purchasing our services, you agree to these Terms. BARAHBASHA is a trading name of MALEIBA (Pty) Ltd, South Africa.</p>
+                    <h3>1. Services</h3>
+                    <p>We provide Local SEO services: Google Business Profile audits (Local Footprint Blueprint), citation building & entity optimisation (Map-Pack Takeover Engine), and ongoing local SEO retainer (Local Monopoly Retainer). All services are business-to-business.</p>
+                    <h3>2. Payments & Billing</h3>
+                    <ul>
+                        <li>Prices in South African Rand (ZAR). VAT inclusive where applicable.</li>
+                        <li>PayFast secure checkout for Blueprint (R1 599). Takeover Engine (R14 000) and Retainer (R15 000) billed via Direct EFT as stated in footer, or via WhatsApp invoice link.</li>
+                        <li>Retainer billed monthly in advance. Direct EFT billing – no automatic card debit unless agreed.</li>
+                    </ul>
+                    <h3>3. Client Responsibilities</h3>
+                    <ul>
+                        <li>Provide accurate business details, Google Business Profile access, and timely feedback.</li>
+                        <li>Maintain NAP consistency after our cleanup; changes without notice may affect rankings.</li>
+                    </ul>
+                    <h3>4. No Guarantee of Rankings</h3>
+                    <p>Local SEO depends on Google algorithms, competitor activity, and market factors outside our control. We do not guarantee specific rankings, traffic, or revenue, but we apply best-practice forensic methods – we see what others miss.</p>
+                    <h3>5. Intellectual Property</h3>
+                    <p>Audit reports, blueprints, and strategy documents are licensed for internal use by the purchasing business only, not for resale or distribution to other agencies.</p>
+                    <h3>6. Governing Law</h3>
+                    <p>These Terms are governed by the laws of the Republic of South Africa. Jurisdiction: Eastern Cape Division, Port Elizabeth.</p>
+                    <h3>7. Contact</h3>
+                    <p>For any terms query: WhatsApp via site button or email marketing@barahbasha.co.za</p>
+                </div>
+            </details>
+
+            <details class="legal-accordion" id="privacy">
+                <summary class="legal-summary">Privacy Policy (POPIA Compliant)</summary>
+                <div class="legal-content">
+                    <div class="legal-meta">POPIA Compliant Privacy Policy</div>
+                    <p>BARAHBASHA respects your privacy and complies with the Protection of Personal Information Act (POPIA) of South Africa.</p>
+                    <h3>What we collect</h3>
+                    <ul>
+                        <li>Contact info you submit via WhatsApp links or PayFast checkout (name, phone, email, business name, address).</li>
+                        <li>Business profile data you authorise us to access (Google Business Profile, website URL).</li>
+                        <li>Anonymous analytics (page views, device type) for improving site performance.</li>
+                    </ul>
+                    <h3>How we use it</h3>
+                    <ul>
+                        <li>To deliver audits, build citations, and provide local SEO services.</li>
+                        <li>To communicate via WhatsApp or email about your order and results.</li>
+                        <li>To send monthly retainer reports where applicable.</li>
+                    </ul>
+                    <h3>Sharing</h3>
+                    <p>We do not sell your data. We share only with essential processors: PayFast (payments), Google (for GBP access), and local citation directories where you have approved listing. All processors are POPIA/GDPR aligned.</p>
+                    <h3>Retention</h3>
+                    <p>We retain audit data for 24 months for benchmarking, then anonymise. You may request deletion via marketing@barahbasha.co.za.</p>
+                    <h3>Your rights</h3>
+                    <p>Under POPIA you may request access, correction, or deletion of personal info. Contact us with your request and proof of identity.</p>
+                    <h3>Cookies</h3>
+                    <p>We use only essential cookies for site function and PayFast. No third-party advertising cookies.</p>
+                </div>
+            </details>
+
+            <details class="legal-accordion" id="refund">
+                <summary class="legal-summary">Refund, Cancellation & Delivery Policy</summary>
+                <div class="legal-content">
+                    <div class="legal-meta">Refund, Cancellation & Delivery Policy • South Africa</div>
+                    <h3>1. Nature of Products</h3>
+                    <p>Local Footprint Blueprint is a digital service – forensic audit + strategy blueprint delivered as a detailed PDF via email/WhatsApp within 3-5 business days after payment and receipt of business details. Map-Pack Takeover and Retainer are services with work commencing after onboarding call.</p>
+                    <h3>2. Local Footprint Blueprint (Tier 1 – R1 599) – No Refunds</h3>
+                    <p><strong>All sales are final.</strong> The Local Footprint Blueprint is a custom, forensic digital audit where research begins immediately after payment. Due to the immediate allocation of analyst time and proprietary data costs, <strong>no refunds, cancellations, or exchanges</strong> are offered once payment is made, in line with Section 16 of ECTA for custom digital services.</p>
+                    <p>By purchasing you agree to instant commencement of work. If you have not submitted business details, email marketing@barahbasha.co.za within 7 days to schedule delivery, or your order will be marked as abandoned with no refund.</p>
+                    <h3>3. Takeover Engine & Retainer – Cancellation</h3>
+                    <ul>
+                        <li>Takeover Engine (R14 000): 50% deposit non-refundable once citation build begins (directories incur costs). You may cancel before kickoff call for full refund minus R500 admin.</li>
+                        <li>Local Monopoly Retainer (R15 000/mo): Month-to-month. Cancel anytime with 14 days written notice before next billing cycle. No refund for current month already in progress, but work continues till end of cycle.</li>
+                    </ul>
+                    <h3>4. Delivery Issues</h3>
+                    <p>If you do not receive your Blueprint within 5 business days after providing all info, contact marketing@barahbasha.co.za and we will redeliver within 24h. For Tier 1, redelivery is the sole remedy – no refund.</p>
+                    <h3>5. EFT Billing</h3>
+                    <p>All large packages billed via Direct EFT to MALEIBA (Pty) Ltd T/A BARAHBASHA. EFT details provided on invoice. Proof of payment to marketing@barahbasha.co.za secures start date.</p>
+                    <h3>6. How to request</h3>
+                    <p>WhatsApp us via site buttons or email marketing@barahbasha.co.za with: Order name, PayFast transaction ID or EFT date, reason. We respond within 1 business day per Consumer Protection Act.</p>
+                    <p style="margin-top:20px;font-size:0.8rem;"><em>Compliant with CPA & ECTA. We see what others miss – including the fine print.</em></p>
+                </div>
+            </details>
         </section>
     </main>
     <footer>
