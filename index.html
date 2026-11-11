@@ -1,43 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Barahbasha helps South African service businesses improve Google Maps visibility and generate qualified local leads through local SEO and Google Business Profile optimisation.">
-  <title>Barahbasha | Local SEO &amp; Google Maps Growth</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230c0d11'/><path d='M6 16 C10 8 22 8 26 16 C22 24 10 24 6 16Z' fill='none' stroke='%234ea1ff' stroke-width='2.5'/><circle cx='16' cy='16' r='4' fill='%238bc5ff'/></svg>">
-  <style>
-    :root{--bg:#0c0d11;--panel:#12151d;--panel2:#171b26;--text:#eef3ff;--muted:#a8b2c6;--line:rgba(255,255,255,.09);--accent:#4ea1ff;--accent2:#8bc5ff;--highlight:#dbeafe;--success:#4ade80;--shadow:rgba(0,0,0,.35)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:radial-gradient(circle at top,rgba(78,161,255,.18),transparent 30%),linear-gradient(180deg,#0a0b10,#0d1117);color:var(--text);line-height:1.6}a{color:inherit;text-decoration:none}.container{width:min(1120px,calc(100% - 32px));margin:auto}.topbar{position:sticky;top:0;z-index:10;background:rgba(12,13,17,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{display:flex;align-items:center;justify-content:space-between;min-height:70px;gap:16px}.brand{font-weight:800;letter-spacing:.08em;text-transform:uppercase}.brand span{color:var(--accent2)}.nav-actions,.hero-actions,.footer-links{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.button,.cta-inline,summary.payment-button{display:inline-flex;align-items:center;justify-content:center;padding:.8rem 1.1rem;border:1px solid rgba(78,161,255,.4);border-radius:12px;background:rgba(78,161,255,.1);color:var(--highlight);font-weight:700;cursor:pointer}.button.primary{background:linear-gradient(135deg,var(--accent),#2e7ae6);color:#fff;border:0}.hero{padding:76px 0 48px}.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}.eyebrow,.badge{display:inline-block;padding:.4rem .75rem;border-radius:999px;border:1px solid rgba(78,161,255,.3);background:rgba(78,161,255,.08);color:var(--highlight);font-size:.82rem}h1{font-size:clamp(2.6rem,6vw,4.8rem);line-height:1;letter-spacing:-.05em;margin:.8rem 0}h1 span{color:var(--accent2)}.subhead,.section-copy{color:var(--muted);max-width:720px}.hero-card,.service-card,.reason,.testimonial-card,.accordion-item{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.012));border:1px solid var(--line);border-radius:20px}.hero-card{padding:24px;box-shadow:0 24px 50px var(--shadow)}.pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.pill{font-size:.75rem;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:6px 10px}.section{padding:42px 0}.section-title{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.04em;margin:0 0 12px}.services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:stretch}.service-card{padding:24px;display:flex;flex-direction:column}.service-card.featured{border-color:rgba(78,161,255,.45);background:linear-gradient(180deg,rgba(78,161,255,.09),rgba(255,255,255,.015))}.service-card h3{font-size:1.45rem;line-height:1.25;margin:0 0 10px}.service-card p{color:var(--muted)}.includes-title{font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;color:var(--highlight);margin:8px 0}.includes-list{padding-left:20px;color:var(--muted);margin:0 0 18px}.includes-list li+li{margin-top:8px}.price{font-size:2rem;font-weight:800;letter-spacing:-.04em;margin-top:auto;padding-top:12px}.price small{font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:0}.note{font-size:.9rem;color:var(--muted);border-left:3px solid var(--accent);padding:10px 14px;background:rgba(78,161,255,.06);margin:12px 0}.payment-details{margin-top:12px}.payment-button{width:100%;list-style:none}.payment-button::-webkit-details-marker{display:none}.payment-button::after{content:'＋';margin-left:auto}.payment-details[open] .payment-button::after{content:'−'}.bank-details{padding:16px;margin-top:10px;background:var(--panel2);border:1px solid var(--line);border-radius:12px;color:var(--muted)}.bank-details p{margin:4px 0}.bank-details strong{color:var(--text)}.reasons,.testimonials{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.reason,.testimonial-card{padding:20px}.reason h3{margin:0 0 8px}.reason p,.testimonial-card p{color:var(--muted);margin:0}.faq-block,.legal{padding:38px 0;border-top:1px solid var(--line)}.accordion-item{margin-bottom:12px;overflow:hidden}.accordion-header{list-style:none;padding:18px 22px;cursor:pointer;font-weight:700;font-size:1.05rem}.accordion-header::-webkit-details-marker{display:none}.accordion-header::after{content:'▾';float:right;color:var(--accent2)}details[open]>.accordion-header::after{transform:rotate(180deg)}.accordion-content{padding:0 22px 22px;color:var(--muted)}.accordion-content h3{color:var(--highlight);font-size:1.05rem;margin:20px 0 8px}.accordion-content h3:first-child{margin-top:0}.accordion-content ul{padding-left:20px}.cta-strip{margin:40px 0;padding:24px;border:1px solid var(--line);border-radius:18px;background:rgba(78,161,255,.08);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.cta-strip h2{margin:0 0 4px}.cta-strip p{margin:0;color:var(--muted)}.accordion-meta{font-size:.8rem;color:var(--accent2);text-transform:uppercase;letter-spacing:.05em}footer{border-top:1px solid var(--line);padding:26px 0 36px;text-align:center;color:var(--muted)}.footer-links{justify-content:center;margin-bottom:12px}.footer-links a{text-decoration:underline;text-underline-offset:4px;color:var(--highlight);font-size:.85rem}
-    @media(max-width:820px){.hero-grid,.services,.reasons,.testimonials{grid-template-columns:1fr}.hero{padding-top:48px}}@media(max-width:560px){.nav{padding:10px 0;align-items:flex-start;flex-direction:column}.nav-actions{gap:8px}.nav-actions .button{padding:.55rem .75rem;font-size:.82rem}.hero-actions .button{width:100%}.accordion-header{padding:16px}.accordion-content{padding:0 16px 18px}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Barahbasha helps South African service businesses fix their Google Maps visibility and get more local calls.">
+<title>Barahbasha | Google Maps Local SEO</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230c0d11'/><path d='M6 16 C10 8 22 8 26 16 C22 24 10 24 6 16Z' fill='none' stroke='%234ea1ff' stroke-width='2.5'/><circle cx='16' cy='16' r='4' fill='%238bc5ff'/></svg>">
+<style>
+:root{--bg:#0c0d11;--panel:#12151d;--panel2:#171b26;--text:#eef3ff;--muted:#a8b2c6;--line:rgba(255,255,255,.09);--accent:#4ea1ff;--accent2:#8bc5ff;--highlight:#dbeafe;--success:#4ade80;--shadow:rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:radial-gradient(circle at top,rgba(78,161,255,.18),transparent 30%),linear-gradient(180deg,#0a0b10,#0d1117);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,calc(100% - 32px));margin:auto}
+.topbar{position:sticky;top:0;z-index:10;background:rgba(12,13,17,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;min-height:70px;gap:16px}
+.brand{font-weight:800;letter-spacing:.08em;text-transform:uppercase}.brand span{color:var(--accent2)}
+.nav-actions,.hero-actions,.footer-links{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.button,.cta-inline,summary.payment-button{display:inline-flex;align-items:center;justify-content:center;padding:.8rem 1.1rem;border:1px solid rgba(78,161,255,.4);border-radius:12px;background:rgba(78,161,255,.1);color:var(--highlight);font-weight:700;cursor:pointer}
+.button.primary{background:linear-gradient(135deg,var(--accent),#2e7ae6);color:#fff;border:0}
+.hero{padding:76px 0 48px}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+.eyebrow,.badge{display:inline-block;padding:.4rem .75rem;border-radius:999px;border:1px solid rgba(78,161,255,.3);background:rgba(78,161,255,.08);color:var(--highlight);font-size:.82rem}
+h1{font-size:clamp(2.4rem,5.5vw,4.2rem);line-height:1.1;letter-spacing:-.04em;margin:.8rem 0}
+h1 span{color:var(--accent2)}
+.subhead,.section-copy{color:var(--muted);max-width:720px;font-size:1.05rem}
+.hero-card,.service-card,.reason,.testimonial-card,.accordion-item{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.012));border:1px solid var(--line);border-radius:20px}
+.hero-card{padding:24px;box-shadow:0 24px 50px var(--shadow)}
+.pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.pill{font-size:.75rem;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:6px 10px}
+.section{padding:42px 0}
+.section-title{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.04em;margin:0 0 12px}
+.services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:stretch}
+.service-card{padding:24px;display:flex;flex-direction:column}
+.service-card.featured{border-color:rgba(78,161,255,.45);background:linear-gradient(180deg,rgba(78,161,255,.09),rgba(255,255,255,.015))}
+.service-card h3{font-size:1.45rem;line-height:1.25;margin:0 0 10px}
+.service-card p{color:var(--muted)}
+.includes-title{font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;color:var(--highlight);margin:8px 0}
+.includes-list{padding-left:20px;color:var(--muted);margin:0 0 18px}
+.includes-list li+li{margin-top:8px}
+.price{font-size:2rem;font-weight:800;letter-spacing:-.04em;margin-top:auto;padding-top:12px}
+.price small{font-size:.78rem;color:var(--muted);font-weight:500;letter-spacing:0}
+.note{font-size:.9rem;color:var(--muted);border-left:3px solid var(--accent);padding:10px 14px;background:rgba(78,161,255,.06);margin:12px 0}
+.payment-details{margin-top:12px}
+.payment-button{width:100%;list-style:none}
+.payment-button::-webkit-details-marker{display:none}
+.payment-button::after{content:'＋';margin-left:auto}
+.payment-details[open] .payment-button::after{content:'−'}
+.bank-details{padding:16px;margin-top:10px;background:var(--panel2);border:1px solid var(--line);border-radius:12px;color:var(--muted)}
+.bank-details p{margin:4px 0}.bank-details strong{color:var(--text)}
+.reasons,.testimonials{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.reason,.testimonial-card{padding:20px}.reason h3{margin:0 0 8px}.reason p,.testimonial-card p{color:var(--muted);margin:0}
+.faq-block,.legal{padding:38px 0;border-top:1px solid var(--line)}
+.accordion-item{margin-bottom:12px;overflow:hidden}
+.accordion-header{list-style:none;padding:18px 22px;cursor:pointer;font-weight:700;font-size:1.05rem}
+.accordion-header::-webkit-details-marker{display:none}
+.accordion-header::after{content:'▾';float:right;color:var(--accent2)}
+details[open]>.accordion-header::after{transform:rotate(180deg)}
+.accordion-content{padding:0 22px 22px;color:var(--muted)}
+.accordion-content h3{color:var(--highlight);font-size:1.05rem;margin:20px 0 8px}
+.accordion-content h3:first-child{margin-top:0}
+.accordion-content ul{padding-left:20px}
+.cta-strip{margin:40px 0;padding:24px;border:1px solid var(--line);border-radius:18px;background:rgba(78,161,255,.08);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.cta-strip h2{margin:0 0 4px}.cta-strip p{margin:0;color:var(--muted)}
+.accordion-meta{font-size:.8rem;color:var(--accent2);text-transform:uppercase;letter-spacing:.05em}
+footer{border-top:1px solid var(--line);padding:26px 0 36px;text-align:center;color:var(--muted)}
+.footer-links{justify-content:center;margin-bottom:12px}
+.footer-links a{text-decoration:underline;text-underline-offset:4px;color:var(--highlight);font-size:.85rem}
+@media(max-width:820px){.hero-grid,.services,.reasons,.testimonials{grid-template-columns:1fr}.hero{padding-top:48px}}
+@media(max-width:560px){.nav{padding:10px 0;align-items:flex-start;flex-direction:column}.nav-actions{gap:8px}.nav-actions .button{padding:.55rem .75rem;font-size:.82rem}.hero-actions .button{width:100%}.accordion-header{padding:16px}.accordion-content{padding:0 16px 18px}}
+</style>
 </head>
 <body>
-  <header class="topbar"><div class="container nav"><a class="brand" href="#top">Barah<span>basha</span></a><nav class="nav-actions" aria-label="Main navigation"><a class="button" href="#services">Services</a><a class="button" href="#faq">FAQ</a><a class="button" href="https://wa.me/p/38387236564255774/27713793251">WhatsApp Desk</a></nav></div></header>
-  <main class="container" id="top">
-    <section class="hero"><div class="hero-grid"><div><div class="eyebrow">Local SEO • Google Maps • Leads • We see what others miss</div><h1>We help <span>service businesses</span> own the local map.</h1><p class="subhead">We capture, optimise, and defend premium Google Map Pack visibility for South African businesses that want more calls, more trust, and more qualified leads.</p><div class="hero-actions"><a class="button primary" href="https://wa.me/p/38387236564255774/27713793251">Talk to us on WhatsApp</a><a class="button" href="#services">See our packages</a></div><div class="pill-row"><span class="pill">Google Business Profile</span><span class="pill">Local citations</span><span class="pill">Local SEO strategy</span></div></div><aside class="hero-card"><strong>Local visibility, built with purpose.</strong><p class="section-copy">We focus on the signals that strengthen local authority and help turn search visibility into enquiries.</p><div class="pill-row"><span class="pill">GBP optimisation</span><span class="pill">Citation building</span><span class="pill">Map ranking monitoring</span><span class="pill">Conversion readiness</span></div></aside></div></section>
-    <section class="section" id="services"><h2 class="section-title">Local growth systems built for visibility.</h2><p class="section-copy">Choose a focused diagnostic or a one-month implementation package combining setup and ongoing local SEO activity.</p>
-      <div class="services">
-        <article class="service-card featured"><div><span class="badge">One-off diagnostic</span><h3>Local 3-Pack Competitor &amp; Technical Audit</h3><p>A competitor and technical review that pinpoints local visibility gaps and provides a practical remediation roadmap.</p><div class="includes-title">What is included</div><ul class="includes-list"><li><strong>Google Business Profile health review:</strong> Review of categories, profile completeness, NAP consistency, and review signals.</li><li><strong>Local competitor benchmark:</strong> Comparison with leading local listings in your area.</li><li><strong>Directory and citation gap analysis:</strong> Review of key South African business directory listings.</li><li><strong>LocalBusiness structured data recommendations:</strong> Actionable schema guidance for your website.</li><li><strong>Prioritised recommendations:</strong> Clear next steps for improving your local presence.</li></ul></div><div class="price">R390 <small>one-time fee</small></div><p class="note"><strong>Audit credit:</strong> The R390 audit fee is credited toward the one-month package if you upgrade within 14 days of receiving your audit.</p><details class="payment-details"><summary class="payment-button">Pay by EFT — show banking details</summary><div class="bank-details"><p><strong>Bank:</strong> Capitec Entrepreneur account</p><p><strong>Account name:</strong> Barahbasha</p><p><strong>Account number:</strong> 2594244712</p><p><strong>Branch code:</strong> 470010</p><p><strong>Payment reference:</strong> Use the email address we used to contact you in our outreach email. Please use that same email address as your EFT reference so we can match your payment.</p><p>After payment, email proof of payment to <a href="mailto:marketing@barahbasha.co.za">marketing@barahbasha.co.za</a>.</p></div></details></article>
-        <article class="service-card"><div><span class="badge">One-month engagement</span><h3>Map Pack Takeover &amp; Local Monopoly</h3><p>A combined one-month setup and optimisation package bringing together the core Map Pack Takeover and Local Monopoly services. This is a fixed one-month engagement, not an automatically renewing retainer.</p><div class="includes-title">What is included</div><ul class="includes-list"><li>Google Business Profile entity optimisation and category tuning.</li><li>Setup and deployment of up to 50+ relevant local South African directory citations, subject to directory eligibility and processing times.</li><li>NAP data consistency review and cleanup recommendations.</li><li>LocalBusiness schema and local landing-page configuration recommendations or implementation, subject to website access and platform capability.</li><li>Review-generation workflow setup and reputation monitoring guidance.</li><li>Local visibility monitoring, competitor review, and reporting during the month.</li><li>Google Posts and business photo optimisation during the engagement.</li><li><strong>Two-day on-site photo session</strong> to capture business and service imagery.</li></ul><p class="note"><strong>On-site visit:</strong> The client must provide for and cover the cost of the consultant's travel and accommodation for the two-day photo session. Dates and location must be agreed in advance. Travel and accommodation are not included in the R1,500 fee.</p></div><div class="price">R1,500 <small>for one month</small></div><details class="payment-details"><summary class="payment-button">Pay by EFT — show banking details</summary><div class="bank-details"><p><strong>Bank:</strong> Capitec Entrepreneur account</p><p><strong>Account name:</strong> Barahbasha</p><p><strong>Account number:</strong> 2594244712</p><p><strong>Branch code:</strong> 470010</p><p><strong>Payment reference:</strong> Use the email address we used to contact you in our outreach email. Please use that same email address as your EFT reference so we can match your payment.</p><p>After payment, email proof of payment to <a href="mailto:marketing@barahbasha.co.za">marketing@barahbasha.co.za</a>.</p></div></details></article>
+
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="#top">Barah<span>basha</span></a>
+    <nav class="nav-actions" aria-label="Main navigation">
+      <a class="button" href="#services">Services</a>
+      <a class="button" href="#faq">FAQ</a>
+      <a class="button" href="https://wa.me/p/38387236564255774/27713793251">WhatsApp Desk</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container" id="top">
+  
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Google Maps Visibility • Practical Local SEO • More Calls</div>
+        <h1>When local clients search, make sure they find <span>your business first</span>.</h1>
+        <p class="subhead">If someone searches for your service in your suburb right now, how many competitors do they have to tap through before seeing your name? We fix your Google profile so local customers find you in seconds.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://wa.me/p/38387236564255774/27713793251">Talk to us on WhatsApp</a>
+          <a class="button" href="#services">See our packages</a>
+        </div>
+        <div class="pill-row">
+          <span class="pill">Google Business Profile Fixes</span>
+          <span class="pill">Local Citations</span>
+          <span class="pill">Zero Fluff</span>
+        </div>
       </div>
-    </section>
-    <section class="section"><h2 class="section-title">Why brands choose Barahbasha.</h2><p class="section-copy">We focus on the signals that support trust, local authority, relevance, and conversion readiness.</p><div class="reasons"><article class="reason"><h3>Precision targeting</h3><p>We identify local visibility gaps and opportunities relevant to your service area.</p></article><article class="reason"><h3>Authority building</h3><p>We strengthen your profile, citation footprint, and local SEO foundations.</p></article><article class="reason"><h3>Practical execution</h3><p>Recommendations and implementation are focused on measurable local presence improvements.</p></article></div></section>
-    <section class="section" id="testimonials"><h2 class="section-title">What our clients say</h2><p class="section-copy">Feedback from service businesses working to improve local visibility.</p><div class="testimonials"><article class="testimonial-card"><div aria-label="5 out of 5 stars">★★★★★</div><p>“Within 60 days, we went from barely visible on Google Maps to the top 3. The leads are more qualified and we are booking more jobs every week.”</p><p><strong>Sarah M.</strong> — Plumbing Services</p></article><article class="testimonial-card"><div aria-label="5 out of 5 stars">★★★★★</div><p>“Their approach is strategic and different. They understand local SEO, not just vanity metrics. Our map visibility and conversion results improved.”</p><p><strong>James T.</strong> — Legal Services</p></article><article class="testimonial-card"><div aria-label="5 out of 5 stars">★★★★★</div><p>“We needed serious local market authority and they delivered a well-structured, measurable campaign.”</p><p><strong>Lisa K.</strong> — HVAC Services</p></article></div></section>
-    <section class="faq-block" id="faq"><h2 class="section-title">Frequently Asked Questions</h2><p class="section-copy">Information about the audit, EFT payments, and the one-month package.</p>
-      <details class="accordion-item"><summary class="accordion-header">How and when do I receive my audit report?</summary><div class="accordion-content">Your audit is prepared as a report and emailed to you, usually within 24 to 48 hours after payment and receipt of the information needed to complete it. Use the same email address we contacted in our outreach as your EFT reference, and email proof of payment to <a href="mailto:marketing@barahbasha.co.za">marketing@barahbasha.co.za</a>.</div></details>
-      <details class="accordion-item"><summary class="accordion-header">Do you require password access to my Google Business Profile for the audit?</summary><div class="accordion-content">The initial audit is based on publicly available listing, website, directory, and competitor information. If a later implementation task requires account access, we will discuss the required access with you first.</div></details>
-      <details class="accordion-item"><summary class="accordion-header">What does the one-month package include?</summary><div class="accordion-content">The R1,500 package combines the Map Pack Takeover and Local Monopoly services for one month. It includes profile optimisation, local citation and NAP work, local SEO configuration, review and reputation workflow guidance, visibility monitoring, reporting, Google Posts and photo optimisation, and a two-day on-site photo session. The client must cover travel and accommodation for the on-site session. It is not an automatically renewing retainer.</div></details>
-      <details class="accordion-item"><summary class="accordion-header">How do I pay by EFT?</summary><div class="accordion-content">Open the “Pay by EFT — show banking details” button on the relevant package. Use the email address we used to contact you in our outreach email as your payment reference. Email proof of payment to <a href="mailto:marketing@barahbasha.co.za">marketing@barahbasha.co.za</a>.</div></details>
-      <details class="accordion-item"><summary class="accordion-header">Do you guarantee a top Google ranking?</summary><div class="accordion-content">No. Local SEO results depend on Google systems, competitor activity, market conditions, and other factors outside our control. We apply best-practice methods but cannot guarantee specific rankings, traffic, calls, or revenue.</div></details>
-    </section>
-    <div class="cta-strip"><div><h2>Ready to strengthen your local presence?</h2><p>Talk to us about the right next step for your business.</p></div><a class="button primary" href="https://wa.me/p/38387236564255774/27713793251">Contact us on WhatsApp</a></div>
-    <section class="legal" id="legal"><h2 class="section-title">Legal &amp; Governance</h2>
-      <details class="accordion-item" id="terms"><summary class="accordion-header">Terms &amp; Conditions</summary><div class="accordion-content"><div class="accordion-meta">Updated 6 November 2026 • MALEIBA (Pty) Ltd T/A BARAHBASHA</div><p>By accessing barahbasha.co.za or purchasing our services, you agree to these Terms. BARAHBASHA is a trading name of MALEIBA (Pty) Ltd, South Africa. All prices are in South African Rand (ZAR); VAT treatment will be stated on the applicable invoice.</p><h3>1. Services and scope</h3><p>We provide Local SEO and Google Business Profile audits and services. The audit is a one-off diagnostic. The Map Pack Takeover &amp; Local Monopoly package is a fixed one-month engagement combining setup and ongoing optimisation activities described on this page. Specific implementation depends on the client's business, access, platform capabilities, and the eligibility and processing rules of third-party directories.</p><h3>2. Fees and payment</h3><ul><li>The Local 3-Pack Competitor &amp; Technical Audit costs R390.</li><li>The combined Map Pack Takeover &amp; Local Monopoly package costs R1,500 for one month.</li><li>Payment is by direct EFT to the Capitec Entrepreneur account displayed when the customer opens the payment-details button.</li><li>For the EFT payment reference, the customer must use the email address to which Barahbasha sent its outreach email. This enables us to match the payment to the customer.</li><li>Please send proof of payment to marketing@barahbasha.co.za. Work is scheduled after payment is confirmed and required onboarding information is received.</li><li>The one-month package does not renew automatically. Any additional engagement must be separately agreed.</li></ul><h3>3. Two-day on-site photo session: travel and accommodation</h3><p>The R1,500 package includes a two-day on-site photo session, subject to scheduling and location agreement in advance. The client is responsible for arranging and paying for the service provider's reasonable travel and accommodation costs required to attend the agreed site. These costs are not included in the package fee and must be agreed before travel is booked. If the client does not make the agreed arrangements, the parties will reschedule or agree another delivery arrangement in writing.</p><h3>4. Client responsibilities</h3><ul><li>Provide accurate business information, requested materials, timely feedback, and any access required for agreed work.</li><li>Ensure the client has rights and permissions for any premises, people, brands, or materials photographed.</li><li>Maintain accurate business information and notify us of relevant changes.</li></ul><h3>5. Rankings and outcomes</h3><p>Local SEO depends on Google algorithms, competitor activity, and market factors outside our control. We do not guarantee specific rankings, traffic, calls, or revenue.</p><h3>6. Audit credit</h3><p>The R390 audit fee may be credited toward the R1,500 one-month package if the customer upgrades within 14 days of receiving the audit. The applicable credit and remaining balance will be confirmed before package work begins.</p><h3>7. Intellectual property</h3><p>Audit reports, strategies, and deliverables are licensed for internal use by the purchasing business and may not be resold or distributed to other agencies.</p><h3>8. Governing law and contact</h3><p>These Terms are governed by the laws of the Republic of South Africa. For queries, contact marketing@barahbasha.co.za or use the WhatsApp link on this site.</p></div></details>
-      <details class="accordion-item" id="privacy"><summary class="accordion-header">Privacy Policy</summary><div class="accordion-content"><p>BARAHBASHA respects your privacy and handles personal information in accordance with applicable South African data protection law, including POPIA.</p><h3>Information we collect and use</h3><ul><li>Contact information and business details you provide when communicating with us.</li><li>Public business listing and website information, and any profile information you authorise us to access for delivery.</li><li>Information needed to identify and reconcile payments, including the outreach email address used as the EFT reference and proof of payment.</li></ul><p>We use this information to respond to enquiries, match payments, deliver audits and services, and communicate with you about your work. We do not sell personal information. We share information only with service providers where necessary to deliver the service or meet legal obligations.</p><h3>Retention and your rights</h3><p>We retain information only for as long as reasonably necessary for service delivery, records, and legal requirements. You may request access to, correction of, or deletion of personal information by contacting marketing@barahbasha.co.za, subject to applicable legal obligations.</p></div></details>
-      <details class="accordion-item" id="refund"><summary class="accordion-header">Refund, Cancellation &amp; Delivery Policy</summary><div class="accordion-content"><h3>1. Audit delivery</h3><p>The R390 audit is a customised digital deliverable sent by email, generally within 24–48 hours after payment and receipt of required information. Contact marketing@barahbasha.co.za if it has not arrived within that timeframe.</p><h3>2. Audit credit</h3><p>The R390 audit fee can be credited toward the one-month package if you upgrade within 14 days of receiving the audit. Confirm the credit and amount payable before starting package work.</p><h3>3. One-month package and cancellation</h3><p>The R1,500 combined package is a fixed one-month engagement and does not automatically renew. Once work has commenced, cancellation and any refund will be handled in accordance with the work completed, costs already incurred, and applicable South African consumer law. Contact us promptly if you need to discuss a change or cancellation.</p><h3>4. On-site session</h3><p>The two-day on-site photo session is included in the package, but travel and accommodation are the client's responsibility and are additional to the R1,500 package fee. The location, dates, and travel/accommodation arrangements must be agreed before booking. If the agreed visit cannot proceed, we will discuss rescheduling or an alternative arrangement.</p><h3>5. Payment and support</h3><p>Pay by EFT using the banking details revealed by the payment button. Use the email address we used to contact you in our outreach email as the payment reference. Send proof of payment or service queries to marketing@barahbasha.co.za.</p></div></details>
-    </section>
-  </main>
-  <footer><div class="container"><nav class="footer-links" aria-label="Legal links"><a href="#terms">Terms &amp; Conditions</a><a href="#privacy">Privacy Policy</a><a href="#refund">Refund &amp; Cancellation Policy</a><a href="#services">Services</a></nav><div>&copy; 2026 MALEIBA (Pty) Ltd T/A BARAHBASHA. Direct EFT billing. All rights reserved.</div><div>We see what others miss • barahbasha.co.za</div></div></footer>
+      <aside class="hero-card">
+        <strong>Built for busy local businesses.</strong>
+        <p class="section-copy">You spend your day on-site servicing clients. We handle the technical map rankings quietly in the background so your phone keeps ringing.</p>
+        <div class="pill-row">
+          <span class="pill">Quick Audits</span>
+          <span class="pill">Map Pack Takeover</span>
+          <span class="pill">Direct EFT Billing</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <h2 class="section-title">Simple services. Clear pricing.</h2>
+    <p class="section-copy">No confusing long-term retainers. Pick a quick technical audit or our complete monthly map takeover.</p>
+    
+    <div class="services">
+      
+      <!-- AUDIT CARD -->
+      <article class="service-card featured">
+        <div>
+          <span class="badge">Quick Diagnostic</span>
+          <h3>Local 3-Pack Competitor & Technical Audit</h3>
+          <p>We check your Google profile against your top 3 local competitors, find the exact errors costing you phone calls, and hand you a clear fix list.</p>
+          <div class="includes-title">What is included</div>
+          <ul class="includes-list">
+            <li><strong>Google Profile check:</strong> Categories, completeness, and review signals.</li>
+            <li><strong>Competitor benchmark:</strong> See why your top local rivals are ranking above you.</li>
+            <li><strong>Citation gap review:</strong> Check key South African business directories.</li>
+            <li><strong>Prioritised action list:</strong> Clear steps to fix your local presence immediately.</li>
+          </ul>
+        </div>
+        <div class="price">R390 <small>one-time fee</small></div>
+        <p class="note"><strong>14-Day Credit Guarantee:</strong> Your R390 audit fee is fully credited toward our Map Pack Takeover package if you upgrade within 14 days.</p>
+        
+        <details class="payment-details">
+          <summary class="payment-button">Pay by EFT — show banking details</summary>
+          <div class="bank-details">
+            <p><strong>Bank:</strong> Capitec Entrepreneur account</p>
+            <p><strong>Account name:</strong> Barahbasha</p>
+            <p><strong>Account number:</strong> 2594244712</p>
+            <p><strong>Branch code:</strong> 470010</p>
+            <p><strong>Payment reference:</strong> Use the exact email address we used to contact you in our outreach email so we can match your payment instantly.</p>
+            <p>After payment, email proof of payment to <a href="mailto:marketing@barahbasha.co.za">marketing@barahbasha.co.za</a>. Your audit report is delivered within 2 to 24 hours after direct EFT confirmation.</p>
+          </div>
+        </details>
+      </article>
+
+      <!-- TAKEOVER CARD -->
+      <article class="service-card">
+        <div>
+          <span class="badge">Complete Monthly Service</span>
+          <h3>Map Pack Takeover & Local Monopoly</h3>
+          <p>A hands-on, one-month engagement where we optimize your profile, build your citations, and put your business right where local customers are looking.</p>
+          <div class="includes-title">What is included</div>
+          <ul class="includes-list">
+            <li>Full Google Business Profile entity optimization and category tuning.</li>
+            <li>Deployment of up to 50+ relevant South African local directory citations.</li>
+            <li>NAP data consistency review and cleanup recommendations.</li>
+            <li>Review-generation workflow setup and reputation monitoring guidance.</li>
+            <li>Regular visibility monitoring and Google Posts optimization.</li>
+            <li><strong>Two-day on-site photo session</strong> to capture professional imagery of your work and team.</li>
+          </ul>
+          <p class="note"><strong>On-site visit note:</strong> Client covers reasonable travel and accommodation costs for the two-day photo session by prior agreement.</p>
+        </div>
+        <div class="price">R5,990 <small>for one month</small></div>
+        
+        <details class="payment-details">
+          <summary class="payment-button">Pay by EFT — show banking details</summary>
+          <div class="bank-details">
+            <p><strong>Bank:</strong> Capitec Entrepreneur account</p>
+            <p><strong>Account name:</strong> Barahbasha</p>
+            <p><strong>Account number:</strong> 2594244712</p>
+            <p><strong>Branch code:</strong> 470010</p>
+            <p><strong>Payment reference:</strong> Use the exact email address we used to contact you in our outreach email so we can match your payment instantly.</p>
+            <p>After payment, email proof of payment to <a href="mailto:marketing@barahbasha.co.za">marketing@barahbasha.co.za</a>.</p>
+          </div>
+        </details>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Why work with Barahbasha?</h2>
+    <p class="section-copy">We cut through the noise and focus purely on what gets local customers calling your line.</p>
+    <div class="reasons">
+      <article class="reason">
+        <h3>Zero Fluff</h3>
+        <p>No complicated dashboards or confusing agency jargon. Just straightforward local SEO work that moves the needle.</p>
+      </article>
+      <article class="reason">
+        <h3>Built for Speed</h3>
+        <p>We respect your time. Audits are delivered promptly after payment confirmation, and setup happens without interrupting your daily operations.</p>
+      </article>
+      <article class="reason">
+        <h3>Local Expertise</h3>
+        <p>Tailored specifically for South African service providers looking to dominate their local suburbs.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="testimonials">
+    <h2 class="section-title">What local business owners say</h2>
+    <p class="section-copy">Real feedback from service providers who improved their map visibility.</p>
+    <div class="testimonials">
+      <article class="testimonial-card">
+        <div aria-label="5 out of 5 stars">★★★★★</div>
+        <p>“Within weeks, our local map rankings jumped into the top 3. We're getting consistent phone enquiries from clients right in our area.”</p>
+        <p><strong>Mark D.</strong> — Appliance Repairs</p>
+      </article>
+      <article class="testimonial-card">
+        <div aria-label="5 out of 5 stars">★★★★★</div>
+        <p>“Super practical approach. They didn't waste time with talk—just fixed our Google listing and delivered exactly what was promised.”</p>
+        <p><strong>Sipho N.</strong> — Security & Gate Automation</p>
+      </article>
+      <article class="testimonial-card">
+        <div aria-label="5 out of 5 stars">★★★★★</div>
+        <p>“The R390 audit instantly showed us what we were doing wrong. Upgrading to the monthly package was the best decision we made.”</p>
+        <p><strong>Andre V.</strong> — Carpet & Upholstery Cleaning</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="faq-block" id="faq">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-copy">Straight answers about our audits, pricing, and how payments work.</p>
+    
+    <details class="accordion-item">
+      <summary class="accordion-header">How and when do I receive my audit report?</summary>
+      <div class="accordion-content">Your audit report is delivered within 2 to 24 hours after direct EFT confirmation is received. Use your outreach email address as your EFT reference and email proof of payment to marketing@barahbasha.co.za.</div>
+    </details>
+    
+    <details class="accordion-item">
+      <summary class="accordion-header">Do you need password access to my Google Business Profile right away?</summary>
+      <div class="accordion-content">No. The initial audit is built using publicly available listing and competitor data. If we move forward with optimization work, we will request access securely.</div>
+    </details>
+    
+    <details class="accordion-item">
+      <summary class="accordion-header">What does the R5,990 monthly package include?</summary>
+      <div class="accordion-content">It is a fixed one-month engagement (not an auto-renewing retainer) covering full GBP optimization, 50+ local citations, review workflow guidance, monitoring, and a two-day on-site photo session (travel and accommodation excluded).</div>
+    </details>
+    
+    <details class="accordion-item">
+      <summary class="accordion-header">How do EFT payments work?</summary>
+      <div class="accordion-content">Click the payment button on your chosen package to reveal our Capitec banking details. Use the exact email address we contacted you with as your payment reference so we can match it immediately.</div>
+    </details>
+    
+    <details class="accordion-item">
+      <summary class="accordion-header">Do you guarantee top Google rankings?</summary>
+      <div class="accordion-content">No. Google's algorithms and competitor activity are always shifting. We apply proven, best-practice local SEO methods to maximize your visibility, but specific rank positions can never be guaranteed.</div>
+    </details>
+  </section>
+
+  <div class="cta-strip">
+    <div>
+      <h2>Ready to get more local calls?</h2>
+      <p>Reach out on WhatsApp or unlock your audit report today.</p>
+    </div>
+    <a class="button primary" href="https://wa.me/p/38387236564255774/27713793251">Contact us on WhatsApp</a>
+  </div>
+
+  <section class="legal" id="legal">
+    <h2 class="section-title">Legal &amp; Governance</h2>
+    
+    <details class="accordion-item" id="terms">
+      <summary class="accordion-header">Terms &amp; Conditions</summary>
+      <div class="accordion-content">
+        <div class="accordion-meta">Updated November 2026 • MALEIBA (Pty) Ltd T/A BARAHBASHA</div>
+        <p>By using barahbasha.co.za or purchasing our services, you agree to these Terms. BARAHBASHA is a trading name of MALEIBA (Pty) Ltd, South Africa. All prices are in South African Rand (ZAR).</p>
+        <h3>1. Services & Scope</h3>
+        <p>We provide Local SEO and Google Business Profile audits and monthly optimization packages as described on this page.</p>
+        <h3>2. Fees and Payment</h3>
+        <ul>
+          <li>The Local 3-Pack Competitor & Technical Audit costs R390.</li>
+          <li>The Map Pack Takeover & Local Monopoly package costs R5,990 for one month.</li>
+          <li>Payment is via direct EFT to our Capitec Entrepreneur account.</li>
+          <li>You must use the outreach email address we contacted you with as your EFT reference. Send proof of payment to marketing@barahbasha.co.za.</li>
+        </ul>
+        <h3>3. On-Site Photo Session</h3>
+        <p>The R5,990 package includes a two-day on-site photo session. The client is responsible for covering reasonable travel and accommodation costs for the provider by prior agreement.</p>
+        <h3>4. Audit Credit</h3>
+        <p>The R390 audit fee is credited toward the R5,990 package if you upgrade within 14 days of receiving your audit report.</p>
+      </div>
+    </details>
+
+    <details class="accordion-item" id="privacy">
+      <summary class="accordion-header">Privacy Policy (POPIA)</summary>
+      <div class="accordion-content">
+        <p>BARAHBASHA handles personal information in strict compliance with South Africa's POPIA legislation. We process publicly available business listing data and client communication details solely for delivering local SEO visibility assessments and services. We never sell your personal data.</p>
+      </div>
+    </details>
+
+    <details class="accordion-item" id="refund">
+      <summary class="accordion-header">Refund, Cancellation & Delivery Policy</summary>
+      <div class="accordion-content">
+        <h3>1. Audit Delivery</h3>
+        <p>The R390 audit is delivered digitally by email within 2 to 24 hours after direct EFT payment confirmation and receipt of required information.</p>
+        <h3>2. Audit Credit</h3>
+        <p>The R390 audit fee can be credited toward the one-month package if you upgrade within 14 days of receiving the audit.</p>
+        <h3>3. Packages & Cancellation</h3>
+        <p>The R5,990 package is a fixed one-month engagement and does not auto-renew. Once work has commenced, cancellation and any refund will be handled in accordance with the work completed, costs already incurred, and applicable South African consumer law.</p>
+      </div>
+    </details>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <nav class="footer-links" aria-label="Legal links">
+      <a href="#terms">Terms &amp; Conditions</a>
+      <a href="#privacy">Privacy Policy</a>
+      <a href="#refund">Refund Policy</a>
+      <a href="#services">Services</a>
+    </nav>
+    <div>&copy; 2026 MALEIBA (Pty) Ltd T/A BARAHBASHA. Direct EFT billing. All rights reserved.</div>
+    <div>We see what others miss • barahbasha.co.za</div>
+  </div>
+</footer>
+
 </body>
 </html>
