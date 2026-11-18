@@ -145,8 +145,10 @@ footer { border-top: 1px solid var(--line); padding: 24px 0 36px; text-align: ce
 </footer>
 
 <script>
-// REPLACE WITH YOUR GOOGLE APPS SCRIPT WEB APP URL
-const WEBHOOK_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
+// GITHUB ISSUES REPO CONFIG
+const GITHUB_OWNER = "Barahbasha";
+const GITHUB_REPO = "barahbasha-audit-engine";
+const GITHUB_ISSUES_TOKEN = "github_pat_YOUR_ISSUES_ONLY_TOKEN"; // Replace with your fine-grained token
 
 const params = new URLSearchParams(window.location.search);
 const leadId = params.get("lead_id") || "";
@@ -163,28 +165,38 @@ document.getElementById("suburb").value = suburb;
 document.getElementById("email").value = email;
 
 function logEvent(payload) {
-  if (!WEBHOOK_URL || WEBHOOK_URL.includes("YOUR_GOOGLE_APPS_SCRIPT")) return Promise.resolve();
-  return fetch(WEBHOOK_URL, {
+  if (!GITHUB_ISSUES_TOKEN || GITHUB_ISSUES_TOKEN.includes("YOUR_ISSUES_ONLY")) {
+    return Promise.resolve();
+  }
+  return fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/issues`, {
     method: "POST",
-    mode: "no-cors",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload)
+    headers: {
+      "Authorization": `Bearer ${GITHUB_ISSUES_TOKEN}`,
+      "Accept": "application/vnd.github+json",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      title: `[SLOT-HOLD] ${payload.business_name || "Lead"} - ${payload.category || "Category"}`,
+      body: JSON.stringify(payload)
+    })
   }).catch(() => {});
 }
 
-// 1. Silently log page view / email click if lead params exist
-if (biz || email || leadId) {
+// 1. Silently log email click on page load (tracked once per session)
+if ((biz || email || leadId) && !sessionStorage.getItem("tracked_click")) {
+  sessionStorage.setItem("tracked_click", "true");
   logEvent({
     event_type: "INTEREST_CLICKED",
     lead_id: leadId,
     business_name: biz,
     category: cat,
     suburb: suburb,
-    email: email
+    email: email,
+    audit_status: "CLICKED_LINK"
   });
 }
 
-// 2. Log explicit slot hold request & reveal R399 PayFast gate
+// 2. Log explicit slot hold form submission & reveal R399 PayFast gate
 document.getElementById("slotHoldForm").addEventListener("submit", async function(e) {
   e.preventDefault();
   const btn = document.getElementById("submitBtn");
@@ -199,7 +211,7 @@ document.getElementById("slotHoldForm").addEventListener("submit", async functio
     suburb: document.getElementById("suburb").value.trim(),
     email: document.getElementById("email").value.trim(),
     phone: document.getElementById("phone").value.trim(),
-    payment_preference: document.getElementById("audit_status").value
+    audit_status: document.getElementById("audit_status").value
   };
 
   await logEvent(formData);
@@ -209,7 +221,7 @@ document.getElementById("slotHoldForm").addEventListener("submit", async functio
   document.getElementById("displayEmail").textContent = formData.email;
 
   const waText = encodeURIComponent(
-    `Hi Dustin, I registered a Mall Car category hold for ${formData.business_name} (${formData.category} in ${formData.suburb}). Status: ${formData.payment_preference}.`
+    `Hi Dustin, I registered a Mall Car category hold for ${formData.business_name} (${formData.category} in ${formData.suburb}). Status: ${formData.audit_status}.`
   );
   document.getElementById("waConfirmLink").href = `https://wa.me/27713793251?text=${waText}`;
 
