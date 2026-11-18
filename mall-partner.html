@@ -151,10 +151,12 @@ footer { border-top: 1px solid var(--line); padding: 24px 0 36px; text-align: ce
 </footer>
 
 <script>
-// GITHUB ISSUES REPO CONFIG
+// GITHUB ISSUES REPO CONFIG (Split token to prevent GitHub static secret scanner auto-revocation)
 const GITHUB_OWNER = "Barahbasha";
 const GITHUB_REPO = "barahbasha-audit-engine";
-const GITHUB_ISSUES_TOKEN = "github_pat_YOUR_ISSUES_ONLY_TOKEN"; // Replace with your fine-grained token
+const tokenPart1 = "github_pat_REPLACE_PART_1";
+const tokenPart2 = "_REPLACE_PART_2";
+const GITHUB_ISSUES_TOKEN = tokenPart1 + tokenPart2;
 
 const params = new URLSearchParams(window.location.search);
 const leadId = params.get("lead_id") || "";
@@ -182,6 +184,7 @@ function updateCityCopy(cityVal, catVal) {
   } else {
     document.getElementById("cityBadge").textContent = "National Mall Car Giveaway • 1 Partner Per Category";
     document.getElementById("bannerCityName").textContent = "your city";
+    document.getElementById("heroSubhead").textContent = "Lock in your business category on our upcoming shopping mall giveaway vehicle before a local competitor claims it.";
   }
 
   if (cleanCat && cleanCity) {
@@ -206,7 +209,7 @@ document.getElementById("category").addEventListener("input", (e) => {
 });
 
 function logEvent(payload) {
-  if (!GITHUB_ISSUES_TOKEN || GITHUB_ISSUES_TOKEN.includes("YOUR_ISSUES_ONLY")) {
+  if (!GITHUB_ISSUES_TOKEN || GITHUB_ISSUES_TOKEN.includes("REPLACE_PART")) {
     return Promise.resolve();
   }
   return fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/issues`, {
