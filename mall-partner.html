@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Log local business interest by suburb or city for a mall car giveaway funded by car brand space with labeled QR codes and voucher redemption entries.">
   <title>Mall Car Interest Check | Barahbasha</title>
   <style>
     :root { --bg: #0c0d11; --panel: #12151d; --text: #eef3ff; --muted: #a8b2c6; --line: rgba(255,255,255,.09); --accent: #4ea1ff; --accent2: #8bc5ff; --highlight: #dbeafe; }
@@ -19,10 +20,14 @@
     .card { margin-top: 28px; background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.012)); border: 1px solid var(--line); border-radius: 20px; padding: 28px; }
     h1 { font-size: clamp(1.9rem, 4vw, 2.8rem); line-height: 1.1; letter-spacing: -.04em; margin: 10px 0 12px; }
     p { color: var(--muted); }
+    .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 18px 0; }
+    .step { background: rgba(12,13,17,.55); border: 1px solid var(--line); border-radius: 14px; padding: 14px; font-size: .88rem; color: var(--muted); }
+    .step strong { display: block; color: var(--accent2); margin-bottom: 4px; }
     .field { margin-top: 16px; }
     label { display: block; font-size: .88rem; font-weight: 600; margin-bottom: 6px; color: var(--highlight); }
-    input, select { width: 100%; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--line); background: var(--panel); color: var(--text); font-size: 1rem; }
+    input { width: 100%; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--line); background: var(--panel); color: var(--text); font-size: 1rem; }
     .note { margin-top: 18px; padding: 12px 14px; border-left: 3px solid var(--accent); background: rgba(78,161,255,.07); color: var(--muted); font-size: .88rem; }
+    @media (max-width: 680px) { .steps { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -37,7 +42,13 @@
     <div class="card">
       <span class="button" style="padding:.35rem .75rem; font-size:.78rem; border-radius:999px;">Interest Check &bull; Suburb &amp; City Demand</span>
       <h1 id="interest-title">Log interest for your suburb or city</h1>
-      <p>I'm tracking local business interest for a mall car giveaway concept. No fixed totals, no preset counts, and no slot holds—if enough interest builds in your area, I reach out directly.</p>
+      <p>I fund the giveaway car through branding contributions from local businesses. Each business gets labeled brand space on the car with its own QR code. Shoppers scan, enter their email, get a store voucher/special right away, and their competition entry only counts once that voucher is redeemed in-store.</p>
+
+      <div class="steps">
+        <div class="step"><strong>1. Car Brand Space</strong>Paid brand space on the car with your own labeled QR code.</div>
+        <div class="step"><strong>2. Scan &amp; Claim</strong>Shoppers scan, enter their email, and get your store voucher.</div>
+        <div class="step"><strong>3. Redeem to Enter</strong>Entries only count once the voucher is redeemed in-store.</div>
+      </div>
 
       <form id="interest-form" action="https://formsubmit.co/marketing@barahbasha.co.za" method="POST">
         <input type="hidden" name="_subject" value="Barahbasha Mall Car Interest Check">
@@ -56,11 +67,11 @@
           <input id="suburb" name="suburb" type="text" required placeholder="e.g. Summerstrand, Gqeberha">
         </div>
         <div class="field">
-          <label for="email">Email or WhatsApp Number</label>
+          <label for="contact">Email or WhatsApp Number</label>
           <input id="contact" name="contact" type="text" required placeholder="you@business.co.za or 071...">
         </div>
 
-        <p class="note">Interest check only. Submitting logs demand for your suburb or city without reserving a spot or creating a payment obligation.</p>
+        <p class="note">Interest check only. Right now I'm checking interest by suburb and city—no fixed totals, slot holds, or obligation. If enough local interest builds in your area, I reach out directly.</p>
 
         <div style="margin-top:20px; display:flex; gap:12px; flex-wrap:wrap;">
           <button class="button primary" type="submit">Log Local Interest</button>
