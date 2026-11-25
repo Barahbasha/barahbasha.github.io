@@ -1,134 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thank You | Barahbasha - Local SEO Audit Confirmed</title>
-    <style>
-        :root {
-            --bg: #0c0d11;
-            --panel: #12151d;
-            --panel-2: #171b26;
-            --text: #eef3ff;
-            --muted: #a8b2c6;
-            --line: rgba(255,255,255,0.09);
-            --accent: #4ea1ff;
-            --accent-2: #8bc5ff;
-            --highlight: #dbeafe;
-            --success: #4ade80;
-            --shadow: rgba(0,0,0,0.35);
-            --promo: #fbbf24;
-        }
-        * { box-sizing: border-box; }
-        body {
-            margin:0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background:
-                radial-gradient(circle at top, rgba(78,161,255,0.22), transparent 28%),
-                linear-gradient(180deg, #0a0b10 0%, #0d1117 100%);
-            color: var(--text);
-            line-height:1.6;
-            min-height:100vh;
-            display:flex;
-            flex-direction:column;
-        }
-        .container { width: min(800px, calc(100% - 32px)); margin:0 auto; }
-        .topbar { backdrop-filter: blur(14px); background: rgba(12,13,17,0.8); border-bottom:1px solid var(--line); padding:18px 0; }
-        .brand { display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; font-size:0.9rem; }
-        .brand-eye { width:32px; height:32px; position:relative; }
-        .brand-eye::before { content:''; position:absolute; inset:0; border:2px solid var(--accent-2); border-radius:50% 0 50% 0; transform:rotate(45deg); }
-        .brand-eye-inner { position:absolute; top:50%; left:50%; width:8px; height:8px; background:var(--accent-2); border-radius:50%; transform:translate(-50%,-50%); box-shadow:0 0 0 6px rgba(78,161,255,0.15); animation:pulse 2s infinite; }
-        @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(78,161,255,0.4)} 70%{box-shadow:0 0 0 10px rgba(78,161,255,0)} 100%{box-shadow:0 0 0 0 rgba(78,161,255,0)} }
-        .brand span { color:var(--accent-2); }
-        main { flex:1; padding:60px 0 40px; }
-        .success-badge {
-            display:inline-flex; align-items:center; gap:8px;
-            background: rgba(74,222,128,0.1); border:1px solid rgba(74,222,128,0.3);
-            color: var(--success); padding:8px 14px; border-radius:999px; font-size:0.8rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; margin-bottom:20px;
-        }
-        h1 { font-size: clamp(2.2rem, 4vw, 3.4rem); line-height:1; letter-spacing:-0.04em; margin:0 0 16px; }
-        h1 span { color: var(--accent-2); }
-        .sub { color:var(--muted); font-size:1.1rem; margin:0 0 28px; max-width:600px; }
-        .card {
-            background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
-            border:1px solid var(--line); border-radius:22px; padding:26px; margin-bottom:22px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
-        .card h3 { margin:0 0 12px; font-size:1.2rem; }
-        .card p, .card li { color:var(--muted); font-size:0.95rem; }
-        .card ul { padding-left:18px; margin:12px 0 0; }
-        .card li + li { margin-top:8px; }
-        .steps { display:grid; grid-template-columns: repeat(3,1fr); gap:14px; margin:20px 0; }
-        .step { background: var(--panel-2); border:1px solid var(--line); border-radius:14px; padding:16px; }
-        .step-num { width:28px; height:28px; border-radius:8px; background:rgba(78,161,255,0.15); color:var(--accent-2); display:grid; place-items:center; font-weight:800; font-size:0.8rem; margin-bottom:10px; }
-        .step strong { display:block; font-size:0.95rem; margin-bottom:4px; }
-        .step span { font-size:0.82rem; color:var(--muted); }
-        .cta-row { display:flex; gap:12px; flex-wrap:wrap; margin-top:22px; }
-        .button { display:inline-flex; align-items:center; justify-content:center; padding:0.9rem 1.3rem; border-radius:12px; font-weight:700; border:1px solid transparent; transition: transform 0.2s; text-decoration:none; }
-        .button-primary { background: linear-gradient(135deg, var(--accent), #2e7ae6); color:white; box-shadow:0 20px 40px rgba(78,161,255,0.24); }
-        .button-secondary { background: rgba(255,255,255,0.04); border-color:var(--line); color:var(--text); }
-        .button:hover { transform:translateY(-1px); }
-        .highlight-box { border:1px dashed rgba(78,161,255,0.3); background: rgba(78,161,255,0.06); border-radius:12px; padding:14px 16px; font-size:0.85rem; color:var(--highlight); margin-top:16px; }
-        footer { border-top:1px solid var(--line); padding:24px 0 40px; color:var(--muted); text-align:center; font-size:0.85rem; }
-        .footer-links { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin:12px 0; }
-        .footer-links a { color:var(--highlight); text-decoration:underline; text-underline-offset:4px; font-size:0.8rem; }
-        @media(max-width:600px){ .steps{grid-template-columns:1fr;} .cta-row .button{width:100%;} }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Got It | Barahbasha</title>
+  <style>
+    :root { --bg: #0c0d11; --text: #eef3ff; --muted: #a8b2c6; --line: rgba(255,255,255,.09); --accent: #4ea1ff; --accent2: #8bc5ff; --highlight: #dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: radial-gradient(circle at top, rgba(78,161,255,.16), transparent 32%), linear-gradient(180deg, #0a0b10, #0d1117); color: var(--text); line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(700px, calc(100% - 32px)); margin: auto; padding: 56px 0; }
+    .card { background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.012)); border: 1px solid var(--line); border-radius: 20px; padding: 32px; }
+    h1 { font-size: clamp(2rem, 4vw, 2.6rem); line-height: 1.1; letter-spacing: -.04em; margin: 0 0 12px; }
+    p { color: var(--muted); }
+    .button { display: inline-flex; align-items: center; justify-content: center; padding: .8rem 1.1rem; border-radius: 12px; border: 1px solid rgba(78,161,255,.4); background: rgba(78,161,255,.12); color: var(--highlight); font-weight: 700; margin-top: 16px; margin-right: 10px; }
+    .button.primary { background: linear-gradient(135deg, var(--accent), #2e7ae6); color: #fff; border: 0; }
+  </style>
 </head>
 <body>
-    <div class="topbar">
-        <div class="container">
-            <a href="/" class="brand"><div class="brand-eye"><div class="brand-eye-inner"></div></div>Barah<span>basha</span></a>
-        </div>
+  <main class="container">
+    <div class="card">
+      <h1 id="ty-title">Received — I'll follow up directly.</h1>
+      <p id="ty-copy">I'm Dustin at Barahbasha. If you just completed an audit checkout or logged local interest, I'll review the details and get back to you directly.</p>
+      <p>Want to send your Google Business Profile link or ask a quick question right away? Reach me at <strong style="color:var(--highlight);">marketing@barahbasha.co.za</strong> or on WhatsApp.</p>
+      <div>
+        <a class="button primary" href="https://wa.me/p/38387236564255774/27713793251">Message on WhatsApp</a>
+        <a class="button" href="/">Back to Barahbasha</a>
+      </div>
     </div>
-    <main>
-        <div class="container">
-            <div class="success-badge">✓ Payment Confirmed — PayFast</div>
-            <h1>You're in. We start <span>now.</span></h1>
-            <p class="sub">Thank you for securing the <strong>Local 3-Pack Competitor &amp; Technical Audit</strong>. Your forensic audit is now queued — we see what others miss, and we start immediately.</p>
-            <div class="card">
-                <h3>What happens next — 3 steps</h3>
-                <div class="steps">
-                    <div class="step"><div class="step-num">01</div><strong>Confirm details</strong><span>If you haven't already, email your business name + Google Maps link + location to marketing@barahbasha.co.za</span></div>
-                    <div class="step"><div class="step-num">02</div><strong>We audit</strong><span>Full GBP diagnostic, competitor benchmark &amp; map-pack opportunity scan (24 to 48 hours)</span></div>
-                    <div class="step"><div class="step-num">03</div><strong>You get your report</strong><span>Actionable PDF audit &amp; remediation roadmap delivered straight to your inbox</span></div>
-                </div>
-                <div class="highlight-box">⏱ <strong>Fast track:</strong> Checked out using the email address we contacted you on? Our matching engine links your payment automatically so we can dispatch your report right away.</div>
-                <div class="highlight-box" style="border-color: rgba(74,222,128,0.4); background: rgba(74,222,128,0.08); color:#d1fae5; margin-top:12px;">✅ <strong>If we have already reached out to you,</strong> your audit is prepared and will be dispatched to your inbox shortly. Keep an eye on your email — we see what others miss.</div>
-            </div>
-            <div class="card">
-                <h3>Your order details</h3>
-                <ul>
-                    <li><strong>Product:</strong> Local 3-Pack Competitor &amp; Technical Audit — R399</li>
-                    <li><strong>Delivery:</strong> Within 24 to 48 hours via PDF email</li>
-                    <li><strong>Upgrade credit:</strong> Your R399 fee is 100% credited toward the Map-Pack Takeover Engine if you upgrade within 14 days</li>
-                    <li><strong>Support:</strong> marketing@barahbasha.co.za or WhatsApp via site</li>
-                </ul>
-            </div>
-            <div class="card" style="background: linear-gradient(135deg, rgba(78,161,255,0.12), rgba(255,255,255,0.02));">
-                <h3>Want to own the Top 3 faster?</h3>
-                <p>Your Audit finds the gaps. Our <strong>Map-Pack Takeover Engine (R5,990)</strong> fixes them — 50+ South African citations, entity optimisation, geo-signal sync &amp; a two-day on-site photo session. Book a call on WhatsApp to apply your R399 audit credit.</p>
-                <div class="cta-row">
-                    <a class="button button-primary" href="https://wa.me/p/28239626725700000/27713793251">Book Call via WhatsApp</a>
-                    <a class="button button-secondary" href="/">Back to home</a>
-                </div>
-            </div>
-            <div style="text-align:center; margin-top:28px; color:var(--muted); font-size:0.85rem;">
-                <p>Need help? <a href="mailto:marketing@barahbasha.co.za" style="color:var(--accent-2); text-decoration:underline;">marketing@barahbasha.co.za</a> • We respond within 1 business day</p>
-                <p style="font-style:italic; color:var(--accent-2);">we see what others miss</p>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="/#terms">Terms</a>
-                <a href="/#privacy">Privacy</a>
-                <a href="/#refund">Refund Policy</a>
-            </div>
-            &copy; 2026 MALEIBA (Pty) Ltd T/A BARAHBASHA. All rights reserved.<br>
-            Secure checkout via PayFast • Book full campaigns via WhatsApp
-        </div>
-    </footer>
+  </main>
+  <script>
+    (function () {
+      const t = (new URLSearchParams(window.location.search).get("type") || "").toLowerCase();
+      if (t === "interest") {
+        document.getElementById("ty-title").textContent = "Interest logged for your area.";
+        document.getElementById("ty-copy").textContent = "Thanks—I've recorded your interest for your suburb or city. If enough local demand builds in your area, I'll reach out directly.";
+      }
+    })();
+  </script>
 </body>
 </html>
