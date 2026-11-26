@@ -40,7 +40,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Dustin Maleiba at Barahbasha helps South African businesses fix Google Business Profile gaps, get local reviews, and check suburb demand for a QR-powered mall car giveaway.">
   <title>Barahbasha | Google Listing Fixes, Audits &amp; Local Demand</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230c0d11'/><path d='M6 16 C10 8 22 8 26 16 C22 24 10 24 6 16Z' fill='none' stroke='%234ea1ff' stroke-width='2.5'/><circle cx='16' cy='16' r='4' fill='%238bc5ff'/></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,[STRIPPED]">
   <style>
     :root { --bg: #0c0d11; --panel: #12151d; --panel2: #171b26; --text: #eef3ff; --muted: #a8b2c6; --line: rgba(255, 255, 255, .09); --accent: #4ea1ff; --accent2: #8bc5ff; --highlight: #dbeafe; --success: #4ade80; --warning: #fbbf24; --shadow: rgba(0, 0, 0, .35); }
     * { box-sizing: border-box; }
@@ -108,6 +108,9 @@
     footer { border-top: 1px solid var(--line); padding: 26px 0 36px; text-align: center; color: var(--muted); }
     .footer-links { justify-content: center; margin-bottom: 12px; }
     .footer-links a { text-decoration: underline; text-underline-offset: 4px; color: var(--highlight); font-size: .85rem; }
+    .optout-card { max-width: 600px; margin: 0 auto; padding: 28px; background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.012)); border: 1px solid var(--line); border-radius: 20px; text-align: center; }
+    .optout-card input { width: 100%; padding: 14px; margin: 16px 0 12px; border: 1px solid var(--line); border-radius: 12px; background: #0c0d11; color: var(--text); font-size: 16px; box-sizing: border-box; }
+    .optout-success { display: none; background: rgba(74,222,128,.15); border: 1px solid rgba(74,222,128,.4); color: #bbf7d0; padding: 14px; border-radius: 12px; margin: 16px 0; }
     @media (max-width: 960px) { .services, .spotlight-grid { grid-template-columns: 1fr; } }
     @media (max-width: 820px) { .hero-grid, .reasons, .testimonials { grid-template-columns: 1fr; } .hero { padding-top: 48px; } }
     @media (max-width: 560px) { .nav { padding: 10px 0; align-items: flex-start; flex-direction: column; } .nav-actions { gap: 8px; } .nav-actions .button { padding: .55rem .75rem; font-size: .82rem; } .hero-actions .button { width: 100%; } .accordion-header { padding: 16px; } .accordion-content { padding: 0 16px 18px; } }
@@ -121,7 +124,8 @@
         <a class="button highlight-nav" href="/mall-partner.html">Mall Car Interest Check</a>
         <a class="button" href="#services">Audits &amp; Packages</a>
         <a class="button" href="#faq">FAQ</a>
-        <a class="button" href="https://wa.me/p/38387236564255774/27713793251">WhatsApp Desk</a>
+        <a class="button" href="#opt-out">Opt Out</a>
+        <a class="button" href="https://wa.me/p/38387236564255774/27713793251">【entity-WhatsApp¦canonical_name=WhatsApp】 Desk</a>
       </nav>
     </div>
   </header>
@@ -136,7 +140,7 @@
           <div class="hero-actions">
             <a class="button primary" href="#services">Pick an Audit</a>
             <a class="button" href="/mall-partner.html">Mall Car Interest Check</a>
-            <a class="button" href="https://wa.me/p/38387236564255774/27713793251">WhatsApp Desk</a>
+            <a class="button" href="https://wa.me/p/38387236564255774/27713793251">【entity-WhatsApp¦canonical_name=WhatsApp】 Desk</a>
           </div>
           <div class="pill-row">
             <span class="pill">R199 Preliminary Audit</span>
@@ -333,6 +337,21 @@
       </div>
     </section>
 
+    <!-- ===== PHASE 2: OPT-OUT ===== -->
+    <section class="section" id="opt-out">
+      <div class="optout-card">
+        <span class="badge">POPIA &bull; Opt Out</span>
+        <h2 class="section-title" style="margin-top:10px;">Don't want messages from us?</h2>
+        <p class="section-copy" style="margin:0 auto;">Enter your email or phone below. We'll add you to our suppression list and stop all marketing messages immediately. You only need to do this once.</p>
+        <form id="optout-form">
+          <input type="text" id="optout-contact" placeholder="Email or phone, e.g. info@business.co.za" required>
+          <button type="submit" class="button primary" style="width:100%;">Opt Me Out</button>
+        </form>
+        <div id="optout-success" class="optout-success">Done. You have been opted out. You will not receive further marketing messages from Barahbasha.</div>
+        <p style="font-size:.82rem; color:var(--muted); margin-top:14px;">We keep your contact only on our suppression list to make sure we never contact you again, as required by POPIA.<br>Questions? Email <a href="mailto:hello@barahbasha.co.za" style="text-decoration:underline;">hello@barahbasha.co.za</a> or reply STOP to any message.</p>
+      </div>
+    </section>
+
     <section class="legal" id="legal">
       <h2 class="section-title">Legal &amp; Governance</h2>
       <details class="accordion-item" id="terms">
@@ -366,6 +385,8 @@
             <li>Publicly visible listing and website details relevant to requested audits or outreach.</li>
           </ul>
           <p>We do not sell personal data and only share details with essential processors such as PayFast for payments.</p>
+          <h3>Opt-out</h3>
+          <p>You can opt out at any time at <a href="#opt-out">barahbasha.co.za/#opt-out</a>, by emailing hello@barahbasha.co.za, or by replying STOP to any message. We keep your contact only on our suppression list to ensure we never contact you again.</p>
         </div>
       </details>
 
@@ -389,8 +410,10 @@
         <a href="#terms">Terms &amp; Conditions</a>
         <a href="#privacy">Privacy Policy</a>
         <a href="#refund">Refund &amp; Cancellation Policy</a>
+        <a href="#opt-out">Opt Out</a>
       </nav>
       <p>&copy; MALEIBA (Pty) Ltd T/A BARAHBASHA. All rights reserved.</p>
+      <p style="font-size:12px;">We respect POPIA. <a href="#opt-out" style="text-decoration:underline;">Opt out at any time</a> and we will never contact you again.</p>
     </div>
   </footer>
 
@@ -421,6 +444,28 @@
 
       if (biz && bottomCtaEl) {
         bottomCtaEl.textContent = `Want to check ${biz} or log local interest?`;
+      }
+
+      // ===== PHASE 2: OPT-OUT FORM =====
+      // This works on your static site (GitHub Pages) - no Flask needed.
+      // It opens an email to you with the opt-out, so you can add it to suppression_list.csv
+      // If you later move to Flask, change this to POST to /opt-out
+      const form = document.getElementById('optout-form');
+      const success = document.getElementById('optout-success');
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const contact = document.getElementById('optout-contact').value.trim();
+          if (!contact) return;
+          // Option 1: Send via email - opens user's email client pre-filled
+          const subject = encodeURIComponent('OPT-OUT REQUEST - ' + contact);
+          const body = encodeURIComponent('Please opt me out.\n\nContact: ' + contact + '\nDate: ' + new Date().toISOString().split('T')[0] + '\nSource: website_optout_form\n\nAdd to suppression_list.csv');
+          window.location.href = 'mailto:hello@barahbasha.co.za?subject=' + subject + '&body=' + body;
+          if (success) success.style.display = 'block';
+          form.reset();
+          // Also store locally so you can see it worked
+          try { localStorage.setItem('barahbasha_opted_out_' + contact.toLowerCase(), '1'); } catch(err) {}
+        });
       }
     })();
   </script>
