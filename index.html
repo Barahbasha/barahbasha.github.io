@@ -337,7 +337,7 @@
       </div>
     </section>
 
-    <!-- ===== PHASE 2: OPT-OUT ===== -->
+    <!-- ===== PHASE 2: OPT-OUT - NEW AUTOMATED GOOGLE FORM VERSION - NO MAILTO ===== -->
     <section class="section" id="opt-out">
       <div class="optout-card">
         <span class="badge">POPIA &bull; Opt Out</span>
@@ -348,6 +348,7 @@
           <button type="submit" class="button primary" style="width:100%;">Opt Me Out</button>
         </form>
         <div id="optout-success" class="optout-success">Done. You have been opted out. You will not receive further marketing messages from Barahbasha.</div>
+        <div id="optout-error" class="optout-success" style="display:none; background:rgba(251,191,36,.15); border-color:rgba(251,191,36,.4); color:#fde68a;">Something went wrong. Please email hello@barahbasha.co.za with STOP and we'll opt you out manually.</div>
         <p style="font-size:.82rem; color:var(--muted); margin-top:14px;">We keep your contact only on our suppression list to make sure we never contact you again, as required by POPIA.<br>Questions? Email <a href="mailto:hello@barahbasha.co.za" style="text-decoration:underline;">hello@barahbasha.co.za</a> or reply STOP to any message.</p>
       </div>
     </section>
@@ -446,25 +447,34 @@
         bottomCtaEl.textContent = `Want to check ${biz} or log local interest?`;
       }
 
-      // ===== PHASE 2: OPT-OUT FORM =====
-      // This works on your static site (GitHub Pages) - no Flask needed.
-      // It opens an email to you with the opt-out, so you can add it to suppression_list.csv
-      // If you later move to Flask, change this to POST to /opt-out
-      const form = document.getElementById('optout-form');
-      const success = document.getElementById('optout-success');
-      if (form) {
-        form.addEventListener('submit', function(e) {
+      // ===== PHASE 2: OPT-OUT - NEW AUTOMATED GOOGLE FORM VERSION =====
+      // Form ID: 1FAIpQLSeESozZQemrHmPCNsUtmbD6E22wRAmMJ21EIqPLPLNgJ0SDVg
+      // Entry ID: entry.630885168
+      // Sheet ID: 1i0UyT-rZKaEJtP9HhdrFCVufA-OVLOPXbsVCTV4XxOM
+      // NO mailto - this posts directly to Google Form
+      const GOOGLE_FORM_ID = '1FAIpQLSeESozZQemrHmPCNsUtmbD6E22wRAmMJ21EIqPLPLNgJ0SDVg';
+      const GOOGLE_FORM_ENTRY_ID = 'entry.630885168';
+
+      const optForm = document.getElementById('optout-form');
+      const optSuccess = document.getElementById('optout-success');
+      const optError = document.getElementById('optout-error');
+      if (optForm) {
+        optForm.addEventListener('submit', async function(e) {
           e.preventDefault();
           const contact = document.getElementById('optout-contact').value.trim();
           if (!contact) return;
-          // Option 1: Send via email - opens user's email client pre-filled
-          const subject = encodeURIComponent('OPT-OUT REQUEST - ' + contact);
-          const body = encodeURIComponent('Please opt me out.\n\nContact: ' + contact + '\nDate: ' + new Date().toISOString().split('T')[0] + '\nSource: website_optout_form\n\nAdd to suppression_list.csv');
-          window.location.href = 'mailto:hello@barahbasha.co.za?subject=' + subject + '&body=' + body;
-          if (success) success.style.display = 'block';
-          form.reset();
-          // Also store locally so you can see it worked
-          try { localStorage.setItem('barahbasha_opted_out_' + contact.toLowerCase(), '1'); } catch(err) {}
+          try {
+            const fd = new FormData();
+            fd.append(GOOGLE_FORM_ENTRY_ID, contact);
+            await fetch('https://docs.google.com/forms/d/e/' + GOOGLE_FORM_ID + '/formResponse', {
+              method: 'POST', mode: 'no-cors', body: fd
+            });
+            if (optSuccess) optSuccess.style.display = 'block';
+            if (optError) optError.style.display = 'none';
+            optForm.reset();
+          } catch(err) {
+            if (optError) optError.style.display = 'block';
+          }
         });
       }
     })();
