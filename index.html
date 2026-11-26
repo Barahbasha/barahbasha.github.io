@@ -9,16 +9,26 @@
 <meta property="og:description" content="Fix your Google listing. Get found by nearby customers. Preliminary Audit R199, Live Audit R399, Full Setup R5,990, Review Watch R99/month.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://barahbasha.co.za/">
-<meta property="og:image" content="https://barahbasha.co.za/og-image.jpg">
-<link rel="icon" href="data:image/svg+xml,[STRIPPED]">
+<meta property="og:image" content="https://barahbasha.co.za/barahbasha-og-image.jpg">
+<meta name="theme-color" content="#0a1622">
+
+<!-- FAVICON + LOGO — PROPER, RELATIVE PATHS -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="barahbasha-favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="barahbasha-favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="barahbasha-apple-touch-180.png">
+<link rel="shortcut icon" href="favicon.ico">
+
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#0a1622;color:#e8eef4;line-height:1.6}
 a{color:inherit;text-decoration:none}
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #c9a227;outline-offset:2px;border-radius:8px}
 .top{max-width:1100px;margin:0 auto;padding:16px}
-.logo{font-size:26px;font-weight:900;letter-spacing:2px}
+.logo{font-size:26px;font-weight:900;letter-spacing:2px;color:#fff}
 .logo b{color:#7ab8ff}
+.logo-row{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-img{width:56px;height:56px;border-radius:50%;background:#0a1622;object-fit:cover;flex-shrink:0;border:1px solid #2a3f55;display:block}
 .nav{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
 .pill{display:inline-block;padding:10px 16px;border-radius:999px;border:1px solid #2a3f55;background:#122433;font-weight:700;font-size:14px;color:#dbeafe}
 .pill.gold{background:#4a3a08;border-color:#8a6d1a;color:#ffe9a3}
@@ -72,6 +82,7 @@ details{margin:10px 0;background:#122433;border:1px solid #2a3f55;border-radius:
 summary{font-weight:800;cursor:pointer}
 footer{border-top:1px solid #2a3f55;padding:28px 16px;text-align:center;font-size:13px;color:#94a3b8}
 footer a{color:#7ab8ff;text-decoration:underline}
+.footer-logo{width:72px;height:72px;border-radius:50%;display:block;margin:0 auto 12px;object-fit:cover;border:1px solid #2a3f55;background:#0a1622}
 .error{color:#b91c1c;font-size:13px;font-weight:700;margin:6px 0;display:none}
 .success{background:#dcfce7;color:#166534;padding:14px;border-radius:12px;font-weight:700;margin-top:12px;display:none}
 .sample{border:1px dashed #94a3b8;border-radius:12px;padding:14px;margin:12px 0;font-size:13px;color:#334155;background:#fff}
@@ -81,7 +92,11 @@ footer a{color:#7ab8ff;text-decoration:underline}
 <body>
 
 <header class="top">
-  <div class="logo">BARAH<b>BASHA</b></div>
+  <!-- LOGO — HEADER -->
+  <a href="./" class="logo-row" aria-label="Barahbasha home">
+    <img class="logo-img" src="barahbasha-logo-512.png" alt="Barahbasha logo — crowned lion" width="56" height="56">
+    <span class="logo">BARAH<b>BASHA</b></span>
+  </a>
   <nav aria-label="Main navigation" class="nav">
     <a class="pill gold" href="#mall-car">Mall Car Interest Check</a>
     <a class="pill" href="#services">Audits &amp; Packages</a>
@@ -111,7 +126,6 @@ footer a{color:#7ab8ff;text-decoration:underline}
 
 <div class="wrap">
 
-<!-- MALL CAR -->
 <section class="section" id="mall-car" aria-labelledby="mall-car-h">
   <div class="box dark">
     <span class="badge blue">Mall Car Interest Check</span>
@@ -122,12 +136,10 @@ footer a{color:#7ab8ff;text-decoration:underline}
   </div>
 </section>
 
-<!-- SERVICES -->
 <section class="section" id="services" aria-labelledby="services-h">
   <h2 id="services-h">Services &amp; Prices — Clear, No Surprises</h2>
   <p class="lead">Start small, upgrade when you're ready. <a href="#terms" style="color:#7ab8ff;text-decoration:underline;">See Terms</a> for what you receive and what happens if delivery is delayed. Turnaround: audits are delivered within 24 hours. If we've already contacted you about your listing, we aim to deliver within the hour.</p>
   <div class="grid">
-
     <div class="card">
       <span class="badge">Tier 1 &bull; Most Popular</span>
       <h3>Preliminary Audit</h3>
@@ -141,7 +153,6 @@ footer a{color:#7ab8ff;text-decoration:underline}
       <a class="btn btn-dark" style="margin:0;" href="https://wa.me/27713793251?text=I%20want%20Preliminary%20Audit%20R199">Get Preliminary Audit</a>
       <p class="note">No refunds on Tier 1 — see <a href="#terms">Terms</a>. Delivered within 24 hours, or within the hour if we've already contacted you.</p>
     </div>
-
     <div class="card gold-border">
       <span class="badge">Tier 1 &bull; Live</span>
       <h3>Live Audit</h3>
@@ -155,7 +166,6 @@ footer a{color:#7ab8ff;text-decoration:underline}
       <a class="btn btn-gold" style="margin:0;" href="https://wa.me/27713793251?text=I%20want%20Live%20Audit%20R399">Book Live Audit</a>
       <p class="note">No refunds on Tier 1 — see <a href="#terms">Terms</a>. Delivered within 24 hours, or within the hour if we've already contacted you.</p>
     </div>
-
     <div class="card gold-border">
       <span class="badge">Full Done-For-You</span>
       <h3>Full Setup</h3>
@@ -171,7 +181,6 @@ footer a{color:#7ab8ff;text-decoration:underline}
       <a class="btn btn-dark" style="margin:0;" href="https://wa.me/27713793251?text=I%20want%20Full%20Setup%20R5990">Get Full Setup</a>
       <p class="note">We cannot guarantee rankings. We fix your listing so Google can show it correctly.</p>
     </div>
-
     <div class="card green-border">
       <span class="badge green">New &bull; Monthly &bull; Recurring</span>
       <h3>Review Watch</h3>
@@ -186,9 +195,7 @@ footer a{color:#7ab8ff;text-decoration:underline}
       <a class="btn btn-green" style="margin:0;" href="https://wa.me/27713793251?text=I%20want%20Review%20Watch%20R99%2Fmonth">Get Review Watch</a>
       <p class="note">Only for businesses who said YES. We never message cold businesses about their reviews. If you get no bad review that week, we say nothing — no spam.</p>
     </div>
-
   </div>
-
   <div class="box" style="margin-top:16px;">
     <h3 style="color:#0a1622;">What is the 7-Point Audit?</h3>
     <p style="margin:10px 0;">1. Business name &amp; category &nbsp; 2. Address &amp; map pin &nbsp; 3. Hours &amp; phone &nbsp; 4. Website link &nbsp; 5. Photos &nbsp; 6. Services / description &nbsp; 7. Reviews &amp; Q&amp;A</p>
@@ -206,7 +213,6 @@ footer a{color:#7ab8ff;text-decoration:underline}
       <b>Fix first:</b> Add website link + shopfront photo + reply to 2 bad reviews. Full PDF has step-by-step screenshots.
     </div>
   </div>
-
   <div class="box" style="margin-top:16px;">
     <h3 style="color:#0a1622;">How Review Watch Works — In 3 Steps</h3>
     <p style="margin:10px 0;"><b>1. You join:</b> Claim your QR stand or buy an audit, then say YES to Review Watch on <span>Whats</span><span>App</span>.</p>
@@ -216,7 +222,6 @@ footer a{color:#7ab8ff;text-decoration:underline}
   </div>
 </section>
 
-<!-- QR STAND — FIX 1: Conditional required + No = blocked -->
 <section class="section" id="complimentary-qr-stand" aria-labelledby="qr-h">
   <div class="box gold">
     <span class="badge">Complimentary &bull; No Obligation</span>
@@ -256,7 +261,6 @@ footer a{color:#7ab8ff;text-decoration:underline}
   </div>
 </section>
 
-<!-- WHY + CONTACT -->
 <section class="section" aria-labelledby="why-h">
   <div class="grid">
     <div class="box">
@@ -271,14 +275,13 @@ footer a{color:#7ab8ff;text-decoration:underline}
     </div>
     <div class="box dark">
       <h3 style="color:#fff;">Contact Barahbasha</h3>
-      <p style="margin:10px 0;color:#cbd5e1;">Owner: Dustin Maleiba<br><span>Whats</span><span>App</span>: <a href="tel:+27713793251">071 379 3251</a><br>Email: <a href="mailto:hello@barahbasha.co.za">hello@barahbasha.co.za</a><br>Web: barahbasha.co.za<br>Area: Summerstrand, Gqeberha</p>
+      <p style="margin:10px 0;color:#cbd5e1;">Owner: Dustin Maleiba<br><span>Whats</span><span>App</span>: <a href="tel:+27713793251">071 379 3251</a><br>Email: <a href="mailto:dustin@barahbasha.co.za">dustin@barahbasha.co.za</a><br>Web: barahbasha.co.za<br>Area: Summerstrand, Gqeberha</p>
       <a class="btn btn-green" href="https://wa.me/27713793251?text=Hi%20Barahbasha"><span>Whats</span><span>App</span> Us</a>
-      <a class="btn btn-dark" href="mailto:hello@barahbasha.co.za">Email Us</a>
+      <a class="btn btn-dark" href="mailto:dustin@barahbasha.co.za">Email Us</a>
     </div>
   </div>
 </section>
 
-<!-- TERMS -->
 <section class="section" id="terms" aria-labelledby="terms-h">
   <div class="box">
     <h2 id="terms-h" style="color:#0a1622;font-size:22px;">Terms — What You Get</h2>
@@ -289,7 +292,6 @@ footer a{color:#7ab8ff;text-decoration:underline}
   </div>
 </section>
 
-<!-- PRIVACY -->
 <section class="section" id="privacy" aria-labelledby="privacy-h">
   <div class="box">
     <h2 id="privacy-h" style="color:#0a1622;font-size:22px;">Privacy Notice (POPIA)</h2>
@@ -297,12 +299,11 @@ footer a{color:#7ab8ff;text-decoration:underline}
     <p style="margin:10px 0;"><b>Who processes it:</b> Google Forms / Google Sheets (where your form answers are stored) and 【entity-GitHub¦canonical_name=GitHub】 (where our suppression list lives). We don't sell your details. We don't use email-finder tools.</p>
     <p style="margin:10px 0;"><b>How long we keep it:</b> QR leads: until you opt out or for 12 months, then deleted. Suppression list: kept indefinitely, so we never contact you again — that's why "never contact you again" works. If you opt out, we keep only your contact on the suppression list, nothing else.</p>
     <p style="margin:10px 0;"><b>What we send:</b> Only what you asked for — your QR stand + one follow-up by your chosen method. Audit buyers get their audit. Review Watch subscribers get weekly review drafts. No cold DM / email / tag.</p>
-    <p style="margin:10px 0;"><b>Your rights:</b> Ask us to see, correct, or delete your details, or to opt out — email <a href="mailto:hello@barahbasha.co.za">hello@barahbasha.co.za</a> or use Opt Out below. We'll confirm within 5 working days.</p>
-    <p style="margin:10px 0;"><b>POPIA-safe means:</b> We only email businesses who said YES, we honour suppression, and opt-out is 1 click. It does not mean Google guarantees anything.</p>
+    <p style="margin:10px 0;"><b>Your rights:</b> Ask us to see, correct, or delete your details, or to opt out — email <a href="mailto:dustin@barahbasha.co.za">dustin@barahbasha.co.za</a> or use Opt Out below. We'll confirm within 5 working days.</p>
+    <p style="margin:10px 0;"><b>POPIA-aware means:</b> We only email businesses who said YES, we honour suppression, and opt-out is 1 click. It does not mean Google guarantees anything.</p>
   </div>
 </section>
 
-<!-- FAQ -->
 <section class="section" id="faq" aria-labelledby="faq-h">
   <h2 id="faq-h">FAQ</h2>
   <details><summary>What is Review Watch? Is it auto-replying?</summary><p style="margin-top:8px;color:#cbd5e1;">No. Review Watch checks your Google reviews every week. If you get a bad review, we draft a polite reply and <span>Whats</span><span>App</span> it to you. You approve it before anything is posted. We never auto-reply.</p></details>
@@ -312,7 +313,6 @@ footer a{color:#7ab8ff;text-decoration:underline}
   <details><summary>Will I rank #1 if I buy Full Setup?</summary><p style="margin-top:8px;color:#cbd5e1;">No one can guarantee #1. We fix your listing so Google can show it correctly — categories, hours, photos, reviews, map pin. Rankings depend on Google, competitors, and customer behaviour.</p></details>
 </section>
 
-<!-- OPT-OUT — FIX: On-page confirmation -->
 <section class="section" id="opt-out" aria-labelledby="optout-h">
   <div class="box" style="border:2px solid #b91c1c;">
     <span class="badge red">POPIA &bull; Opt Out In 1 Click</span>
@@ -322,7 +322,7 @@ footer a{color:#7ab8ff;text-decoration:underline}
       <label for="optout-contact">Email or Phone to Opt Out *</label>
       <input id="optout-contact" type="text" name="entry.630885168" placeholder="you@yourbusiness.co.za or 071 000 0000" required autocomplete="email">
       <button class="btn btn-dark" type="submit">Opt Me Out — Never Contact Me Again</button>
-      <div id="optout-success" class="success" role="status">Done. You've been added to our suppression list. We won't contact you again for marketing. If you get a message after 48 hours, forward it to hello@barahbasha.co.za and we'll fix it.</div>
+      <div id="optout-success" class="success" role="status">Done. You've been added to our suppression list. We won't contact you again for marketing. If you get a message after 48 hours, forward it to dustin@barahbasha.co.za and we'll fix it.</div>
       <p class="fine" style="margin-top:10px;">After you submit, you'll see a confirmation right here on this page. No new tab. Form also at: <a href="https://forms.gle/MnkYJwKrze1kMuw1A" style="color:#1e40af;">forms.gle/MnkYJwKrze1kMuw1A</a></p>
     </form>
     <iframe name="optout-hidden" style="display:none;" title="Opt-out form submission"></iframe>
@@ -333,14 +333,15 @@ footer a{color:#7ab8ff;text-decoration:underline}
 </main>
 
 <footer>
+  <!-- LOGO — FOOTER -->
+  <img class="footer-logo" src="barahbasha-logo-256.png" alt="Barahbasha logo — crowned lion" width="72" height="72">
   <b style="color:#fff;">BARAHBASHA</b> — MALEIBA (Pty) Ltd T/A BARAHBASHA Marketing<br>
-  We see what others miss &bull; Gqeberha, South Africa &bull; <span>Whats</span><span>App</span> <a href="tel:+27713793251">071 379 3251</a> &bull; <a href="mailto:hello@barahbasha.co.za">hello@barahbasha.co.za</a><br>
+  We see what others miss &bull; Gqeberha, South Africa &bull; <span>Whats</span><span>App</span> <a href="tel:+27713793251">071 379 3251</a> &bull; <a href="mailto:dustin@barahbasha.co.za">dustin@barahbasha.co.za</a><br>
   <a href="#opt-out">Opt Out</a> &bull; <a href="#privacy">Privacy</a> &bull; <a href="#terms">Terms</a> &bull; <a href="#complimentary-qr-stand">Complimentary QR Stand</a> &bull; <a href="#services">Services</a><br>
   <span>© 2026 Barahbasha. Independent, not affiliated with Google. Only YES businesses get emails. No cold DM / email / tag.</span>
 </footer>
 
 <script>
-// FIX 1: QR form — required field follows method + block No
 const methodEl = document.getElementById('qr-method');
 const emailEl = document.getElementById('qr-email');
 const phoneEl = document.getElementById('qr-phone');
@@ -365,10 +366,8 @@ qrForm.addEventListener('submit', function(e){
     return;
   }
   noErr.style.display = 'none';
-  // Show on-page confirmation — form still posts to Google Forms in hidden iframe
   setTimeout(function(){ document.getElementById('qr-success').style.display='block'; }, 600);
 });
-// FIX: Opt-out — on-page confirmation
 document.getElementById('optout-form').addEventListener('submit', function(){
   setTimeout(function(){ document.getElementById('optout-success').style.display='block'; }, 600);
 });
