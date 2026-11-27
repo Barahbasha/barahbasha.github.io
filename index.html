@@ -123,7 +123,7 @@ footer a{color:#7ab8ff;text-decoration:underline}
 
 <div class="wrap">
 
-<!-- MALL CAR — NOW LEADS TO COMMUNITY -->
+<!-- MALL CAR -->
 <section class="section" id="mall-car" aria-labelledby="mall-car-h">
   <div class="box dark">
     <span class="badge blue">Mall Car — Interest Check — Not Yet Launched</span>
@@ -240,12 +240,13 @@ footer a{color:#7ab8ff;text-decoration:underline}
   </div>
 </section>
 
+<!-- QR STAND - WITH REVIEW LINK FIELD entry.906675983 -->
 <section class="section" id="complimentary-qr-stand" aria-labelledby="qr-h">
   <div class="box gold">
     <span class="badge">Complimentary &bull; No Obligation</span>
     <h2 id="qr-h" style="color:#0a1622;">Complimentary QR Review Stand</h2>
     <p>Any business, any size, anywhere in South Africa. Shop, home, online, or mobile. Print it or show it on your phone.</p>
-    <p style="margin:12px 0;"><b>How it works:</b> Choose how you want your stand. If you choose Email, we need your email. If you choose <span>Whats</span><span>App</span>, we need your phone. Suburb and category are optional. We only send your stand + one follow-up by the method you chose. Or join the community and ask for it there.</p>
+    <p style="margin:12px 0;"><b>How it works:</b> Choose how you want your stand. If you choose Email, we need your email. If you choose <span>Whats</span><span>App</span>, we need your phone. Suburb and category are optional. If you paste your Google Review Link, we build your stand faster. We only send your stand + one follow-up by the method you chose. Or join the community and ask for it there.</p>
     <form id="qr-form" action="https://docs.google.com/forms/d/e/1FAIpQLSddqdsWnlytm5eXyyl5HXC63Db1i1mmwNyzr3Kn7Btvq_877w/formResponse" method="POST" target="qr-hidden">
       <label for="qr-method">How do you want your stand? *</label>
       <select id="qr-method" name="entry.1945722886" required>
@@ -264,6 +265,9 @@ footer a{color:#7ab8ff;text-decoration:underline}
       <input id="qr-suburb" type="text" name="entry.1179244065" placeholder="e.g. Summerstrand" autocomplete="address-level2">
       <label for="qr-cat">Category (optional)</label>
       <input id="qr-cat" type="text" name="entry.1538113811" placeholder="e.g. Salon, Guesthouse, Spaza">
+      <label for="qr-review-link">Your Google Review Link (if you have it, optional)</label>
+      <input id="qr-review-link" type="url" name="entry.906675983" placeholder="https://g.page/r/...">
+      <p class="fine">Find it in Google: Search your business → Click your listing → Get more reviews → Copy link. Leave blank if you don't have it, we'll find it for you.</p>
       <label for="qr-consent">Can we send you your stand + one follow-up? *</label>
       <select id="qr-consent" name="entry.1713103939" required>
         <option value="">Choose one…</option>
@@ -314,8 +318,8 @@ footer a{color:#7ab8ff;text-decoration:underline}
 <section class="section" id="privacy" aria-labelledby="privacy-h">
   <div class="box">
     <h2 id="privacy-h" style="color:#0a1622;font-size:22px;">Privacy Notice (POPIA)</h2>
-    <p style="margin:10px 0;"><b>What we collect:</b> From QR form: your chosen contact method, email and/or phone, business name, suburb + category if you give them, and your Yes/No consent. From Opt-Out form: email or phone you want suppressed. From audits: your Google listing info you ask us to check. From Community: what you post in the community.</p>
-    <p style="margin:10px 0;"><b>Who processes it:</b> Google Forms / Google Sheets (where your form answers are stored), GitHub (where our suppression list lives), and WhatsApp (community messages). We don't sell your details. We don't use email-finder tools.</p>
+    <p style="margin:10px 0;"><b>What we collect:</b> From QR form: your chosen contact method, email and/or phone, business name, suburb + category if you give them, your Google Review Link if you paste it, and your Yes/No consent. From Opt-Out form: email or phone you want suppressed. From audits: your Google listing info you ask us to check. From Community: what you post in the community.</p>
+    <p style="margin:10px 0;"><b>Who processes it:</b> Google Forms / Google Sheets (where your form answers are stored), 【entity-GitHub¦canonical_name=GitHub】 (where our suppression list lives), and WhatsApp (community messages). We don't sell your details. We don't use email-finder tools.</p>
     <p style="margin:10px 0;"><b>How long we keep it:</b> QR leads: until you opt out or for 12 months, then deleted. Suppression list: kept indefinitely, so we never contact you again — that's why "never contact you again" works. If you opt out, we keep only your contact on the suppression list, nothing else.</p>
     <p style="margin:10px 0;"><b>What we send:</b> Only what you asked for — your QR stand + one follow-up by your chosen method. Audit buyers get their audit. Review Watch subscribers get weekly review drafts. Community members get community updates. No cold DM / email / tag.</p>
     <p style="margin:10px 0;"><b>Your rights:</b> Ask us to see, correct, or delete your details, or to opt out — email <a href="mailto:dustin@barahbasha.co.za">dustin@barahbasha.co.za</a> or use Opt Out below. We'll confirm within 5 working days. To leave community updates, leave the community.</p>
@@ -328,9 +332,10 @@ footer a{color:#7ab8ff;text-decoration:underline}
   <details><summary>What is Review Watch? Is it auto-replying?</summary><p style="margin-top:8px;color:#cbd5e1;">No. Review Watch checks your Google reviews every week. If you get a bad review, we draft a polite reply and <span>Whats</span><span>App</span> it to you. You approve it before anything is posted. We never auto-reply.</p></details>
   <details><summary>Do you DM cold businesses about their bad reviews?</summary><p style="margin-top:8px;color:#cbd5e1;">No. Never. We only watch reviews for businesses who said YES — claimed a QR stand, bought an audit, or bought Full Setup.</p></details>
   <details><summary>Can I cancel Review Watch?</summary><p style="margin-top:8px;color:#cbd5e1;">Yes. Cancel anytime on <span>Whats</span><span>App</span>. No contract. We stop watching the next Monday.</p></details>
-  <details><summary>Is the QR stand really complimentary?</summary><p style="margin-top:8px;color:#cbd5e1;">Yes. Any business, any size, anywhere in SA. Print it or show it on your phone. No obligation to buy anything.</p></details>
+  <details><summary>Is the QR stand really complimentary?</summary><p style="margin-top:8px;color:#cbd5e1;">Yes. Any business, any size, anywhere in SA. Print it or show it on your phone. No obligation to buy anything. The QR on your stand goes to your Google Review page — not your website — so customers can leave a review in 10 seconds.</p></details>
   <details><summary>Will I rank #1 if I buy Full Setup?</summary><p style="margin-top:8px;color:#cbd5e1;">No one can guarantee #1. We fix your listing so Google can show it correctly — categories, hours, photos, reviews, map pin. Rankings depend on Google, competitors, and customer behaviour.</p></details>
   <details><summary>How do I show interest in Mall Car?</summary><p style="margin-top:8px;color:#cbd5e1;">Join the community and post: Business Name + Suburb + What deal you'd offer shoppers. That's it. No payment now. If your area gets enough interest, we'll announce pricing + spots in the community.</p></details>
+  <details><summary>Does the QR stand take customers to my website or my review page?</summary><p style="margin-top:8px;color:#cbd5e1;">Your review page. The QR opens your Google “Write a review” page directly, so customers don't have to find it on your website.</p></details>
 </section>
 
 <section class="section" id="opt-out" aria-labelledby="optout-h">
