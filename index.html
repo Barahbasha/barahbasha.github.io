@@ -1,886 +1,533 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="knUFmJSy943yNXDYvth__VL0-yUpMX_fjPgVIatIPQc" />
-<title>Barahbasha | Google Business Profile Audits in Gqeberha</title>
-<meta name="description" content="Barahbasha helps local businesses improve how they show up on Google. Preliminary Audit R199, Live Audit R399, Full Setup R5,990, Review Watch R99/month. Complimentary QR Review Stand for any business in South Africa. Barahbasha is independent and not affiliated with Google.">
-<meta property="og:title" content="Barahbasha — We see what others miss">
-<meta property="og:description" content="Fix your Google listing. Get found by nearby customers. Preliminary Audit R199, Live Audit R399, Full Setup R5,990, Review Watch R99/month. Join the Barahbasha Community for Mall Car idea updates.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://barahbasha.co.za/">
-<meta property="og:image" content="https://barahbasha.co.za/barahbasha-og-image.jpg">
-<meta name="theme-color" content="#0a1622">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="16x16" href="/barahbasha-favicon-16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/barahbasha-favicon-32.png">
-<link rel="icon" type="image/png" sizes="48x48" href="/barahbasha-favicon-48.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/barahbasha-logo-512.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/barahbasha-apple-180.png">
-<link rel="shortcut icon" href="/favicon.ico">
-<style>
-  :root {
-    --bg-dark: #0a1622;
-    --bg-card-dark: #122433;
-    --bg-light: #f7f5ef;
-    --bg-gold-tint: #fffbeb;
-    --border-dark: #2a3f55;
-    --text-light: #e8eef4;
-    --text-muted: #94a3b8;
-    --text-dark: #111827;
-    --accent-blue: #2a9df4;
-    --accent-sky: #7ab8ff;
-    --accent-gold: #c9a227;
-    --accent-green: #25D366;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    background: var(--bg-dark);
-    color: var(--text-light);
-    line-height: 1.6;
-  }
-  a { color: inherit; text-decoration: none; }
-  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible {
-    outline: 3px solid var(--accent-gold);
-    outline-offset: 2px;
-    border-radius: 8px;
-  }
-
-  .container { max-width: 1080px; margin: 0 auto; padding: 0 18px; }
-
-  /* Header & Navigation */
-  header.top {
-    padding: 18px 0;
-    border-bottom: 1px solid rgba(42, 63, 85, 0.6);
-  }
-  .header-inner {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-  @media (min-width: 860px) {
-    .header-inner {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barahbasha — We see what others miss</title>
+  <meta name="description" content="Barahbasha — Local SEO audits, Google Business Profile help, QR review stands and Review Watch for any business in South Africa.">
+  <link rel="icon" href="barahbasha-logo-512.png">
+  <style>
+    :root {
+      --bg: #071018;
+      --card: #0f1e2b;
+      --card2: #12293a;
+      --gold: #d4af37;
+      --gold2: #f2d67c;
+      --teal: #0e7a6b;
+      --text: #eef3f5;
+      --muted: #a9bcc7;
+      --line: #23404f;
     }
-  }
-  .logo-row {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .logo-img {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    background: var(--bg-dark);
-    object-fit: cover;
-    border: 1px solid var(--border-dark);
-    flex-shrink: 0;
-  }
-  .logo {
-    font-size: 24px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    color: #fff;
-  }
-  .logo b { color: var(--accent-sky); }
 
-  .nav {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  .pill {
-    display: inline-block;
-    padding: 8px 13px;
-    border-radius: 999px;
-    border: 1px solid var(--border-dark);
-    background: var(--bg-card-dark);
-    font-weight: 700;
-    font-size: 13px;
-    color: #dbeafe;
-    transition: border-color 0.15s ease;
-  }
-  .pill:hover { border-color: var(--accent-sky); }
-  .pill.gold { background: #3d3008; border-color: #8a6d1a; color: #ffe9a3; }
-  .pill.green { background: #123a2e; border-color: #2a6b52; color: #d1fae5; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
 
-  /* Hero */
-  .hero { padding: 38px 0 30px; }
-  .hero-tag {
-    display: inline-block;
-    background: #162c40;
-    border: 1px solid var(--border-dark);
-    padding: 7px 14px;
-    border-radius: 999px;
-    font-size: 13px;
-    font-weight: 600;
-    color: #cbd5e1;
-    margin-bottom: 18px;
-  }
-  .hero h1 {
-    font-size: 38px;
-    line-height: 1.08;
-    font-weight: 900;
-    letter-spacing: -0.8px;
-    max-width: 780px;
-  }
-  @media (min-width: 700px) {
-    .hero h1 { font-size: 54px; }
-  }
-  .hero h1 span { color: var(--accent-sky); }
-  .hero-lead {
-    margin: 16px 0 12px;
-    color: #cbd5e1;
-    font-size: 18px;
-    max-width: 660px;
-  }
-  .hero-disclaimer {
-    font-size: 13px;
-    color: var(--text-muted);
-    margin-bottom: 24px;
-  }
-  .hero-actions {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
-    max-width: 780px;
-  }
-  @media (min-width: 680px) {
-    .hero-actions { grid-template-columns: repeat(3, 1fr); }
-  }
-  .chips {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-top: 18px;
-  }
-  .chip {
-    border: 1px solid var(--border-dark);
-    background: var(--bg-card-dark);
-    padding: 7px 12px;
-    border-radius: 999px;
-    font-size: 13px;
-    color: #cbd5e1;
-  }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  /* Buttons */
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 15px 16px;
-    border-radius: 13px;
-    font-weight: 800;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    transition: opacity 0.15s ease, transform 0.1s ease;
-  }
-  .btn:hover { opacity: 0.93; }
-  .btn:active { transform: translateY(1px); }
-  .btn-blue { background: var(--accent-blue); color: #fff; }
-  .btn-dark { background: var(--bg-card-dark); color: #fff; border: 1px solid var(--border-dark); }
-  .btn-gold { background: var(--accent-gold); color: #111; }
-  .btn-green { background: var(--accent-green); color: #0a1622; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.6;
+    }
 
-  /* Sections & Grids */
-  .section { margin: 44px 0; }
-  .section-header { margin-bottom: 20px; }
-  .section-header h2 {
-    font-size: 28px;
-    font-weight: 900;
-    letter-spacing: -0.4px;
-    margin-bottom: 6px;
-  }
-  .section-header p.lead {
-    color: var(--text-muted);
-    font-size: 15px;
-    max-width: 780px;
-  }
-  .text-link { color: var(--accent-sky); text-decoration: underline; }
-  .text-link-dark { color: #1e40af; text-decoration: underline; }
+    a {
+      color: var(--gold2);
+    }
 
-  .grid-2 {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-  @media (min-width: 720px) {
-    .grid-2 { grid-template-columns: 1fr 1fr; }
-  }
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid var(--gold2);
+      outline-offset: 2px;
+    }
 
-  /* Cards & Boxes */
-  .card, .box {
-    background: var(--bg-light);
-    color: var(--text-dark);
-    border-radius: 18px;
-    padding: 24px;
-  }
-  .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .card.dark, .box.dark {
-    background: var(--bg-card-dark);
-    color: var(--text-light);
-    border: 1px solid var(--border-dark);
-  }
-  .card.gold-border { border: 2px solid var(--accent-gold); }
-  .card.green-border { border: 2px solid #166534; }
-  .box.gold { border: 2px solid var(--accent-gold); background: var(--bg-gold-tint); }
-  .box.green-border { border: 2px solid var(--accent-green); }
-  .box.red-border { border: 2px solid #b91c1c; }
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 18px;
+    }
 
-  .badge {
-    display: inline-block;
-    background: var(--accent-gold);
-    color: #111;
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 0.6px;
-    padding: 5px 10px;
-    border-radius: 999px;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-  }
-  .badge.green { background: #dcfce7; color: #166534; }
-  .badge.red { background: #fee2e2; color: #991b1b; }
-  .badge.blue { background: #dbeafe; color: #1e40af; }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
 
-  .card h3, .box h3 {
-    font-size: 21px;
-    font-weight: 800;
-    margin-bottom: 6px;
-  }
-  .price {
-    font-size: 32px;
-    font-weight: 900;
-    margin: 6px 0 12px;
-    line-height: 1.1;
-  }
-  .price small {
-    font-size: 14px;
-    font-weight: 600;
-    color: #6b7280;
-  }
-  .card.dark .price small { color: var(--text-muted); }
+    header img {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      object-fit: cover;
+      background: #fff;
+      flex-shrink: 0;
+    }
 
-  .check-list {
-    list-style: none;
-    margin: 12px 0 20px;
-  }
-  .check-list li {
-    padding: 5px 0 5px 22px;
-    position: relative;
-    font-size: 14px;
-  }
-  .check-list li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #15803d;
-    font-weight: 900;
-  }
-  .card.dark .check-list li::before,
-  .box.dark .check-list li::before {
-    color: #4ade80;
-  }
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+      line-height: 1.1;
+    }
 
-  .card-footer { margin-top: auto; }
-  .note, .fine {
-    font-size: 12px;
-    color: #4b5563;
-    margin-top: 10px;
-    line-height: 1.5;
-  }
-  .card.dark .note, .box.dark .fine { color: var(--text-muted); }
+    header p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
 
-  .sample {
-    border: 1px dashed #94a3b8;
-    border-radius: 12px;
-    padding: 16px;
-    margin-top: 12px;
-    font-size: 13px;
-    color: #334155;
-    background: #fff;
-    line-height: 1.65;
-  }
-  .sample b { color: var(--bg-dark); }
+    .tagline {
+      color: var(--gold2);
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
 
-  .steps-list {
-    margin: 12px 0 16px;
-    padding-left: 20px;
-    font-size: 14px;
-  }
-  .steps-list li { margin-bottom: 8px; }
+    .hero {
+      background: linear-gradient(135deg, #0f2a3a, #0a3a2e);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 26px;
+      margin: 18px 0;
+    }
 
-  .btn-stack {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    margin-top: 14px;
-  }
-  @media (min-width: 600px) {
-    .btn-stack { grid-template-columns: 1fr 1fr; }
-  }
+    .hero h2 {
+      margin: 0 0 8px;
+      font-size: 32px;
+      line-height: 1.15;
+    }
 
-  /* Forms */
-  .form-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
-    margin-top: 14px;
-  }
-  @media (min-width: 680px) {
-    .form-grid { grid-template-columns: 1fr 1fr; }
-    .form-full { grid-column: 1 / -1; }
-  }
-  label {
-    font-size: 13px;
-    font-weight: 800;
-    display: block;
-    margin-bottom: 4px;
-  }
-  input, select, textarea {
-    width: 100%;
-    padding: 12px 14px;
-    border: 1px solid #cbd5e1;
-    border-radius: 11px;
-    font-size: 15px;
-    background: #fff;
-    color: #111;
-  }
-  .error {
-    color: #b91c1c;
-    font-size: 13px;
-    font-weight: 700;
-    margin-top: 8px;
-    display: none;
-  }
-  .success {
-    background: #dcfce7;
-    color: #166534;
-    padding: 14px;
-    border-radius: 12px;
-    font-weight: 700;
-    font-size: 14px;
-    margin-top: 12px;
-    display: none;
-  }
+    .hero p {
+      margin: 0 0 16px;
+      color: #d8e6ea;
+    }
 
-  /* FAQ Accordion */
-  details {
-    margin: 10px 0;
-    background: var(--bg-card-dark);
-    border: 1px solid var(--border-dark);
-    border-radius: 12px;
-    padding: 14px 16px;
-  }
-  summary {
-    font-weight: 800;
-    cursor: pointer;
-    font-size: 15px;
-  }
-  details p {
-    margin-top: 10px;
-    color: #cbd5e1;
-    font-size: 14px;
-  }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
 
-  /* Legal Stack */
-  .legal-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-  }
-  .legal-stack p {
-    margin: 10px 0;
-    font-size: 14px;
-  }
+    .hero-contact {
+      margin-top: 14px;
+      margin-bottom: 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
 
-  /* Footer */
-  footer {
-    border-top: 1px solid var(--border-dark);
-    padding: 36px 18px;
-    text-align: center;
-    font-size: 13px;
-    color: var(--text-muted);
-    margin-top: 48px;
-  }
-  .footer-logo {
-    width: 68px;
-    height: 68px;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 12px;
-    object-fit: cover;
-    border: 1px solid var(--border-dark);
-  }
-  .footer-links {
-    margin: 10px 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px 16px;
-  }
-  .footer-links a {
-    color: var(--accent-sky);
-    text-decoration: underline;
-  }
-</style>
+    .btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #0a141b;
+      font-weight: 800;
+      text-decoration: none;
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 0;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: var(--gold2);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--gold);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(212, 175, 55, 0.12);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    @media (max-width: 760px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h2 {
+        font-size: 26px;
+      }
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card--featured {
+      border-color: var(--gold);
+      outline: 2px solid rgba(212, 175, 55, 0.35);
+    }
+
+    .card h3 {
+      margin: 10px 0 6px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin: 6px 0;
+    }
+
+    .card-cta {
+      margin-top: auto;
+      padding-top: 12px;
+      align-self: flex-start;
+    }
+
+    .price {
+      font-size: 30px;
+      font-weight: 900;
+      color: #fff;
+      margin: 10px 0 2px;
+    }
+
+    .price-unit {
+      font-size: 16px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .badge {
+      display: inline-block;
+      align-self: flex-start;
+      background: var(--teal);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.6px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      text-transform: uppercase;
+    }
+
+    .badge-gold {
+      background: var(--gold);
+      color: #0a141b;
+    }
+
+    ul {
+      margin: 10px 0;
+      padding-left: 20px;
+      color: #d8e6ea;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    .payfast {
+      margin-top: 14px;
+    }
+
+    .payfast button {
+      width: 100%;
+      background: var(--gold);
+      color: #0a141b;
+      font-weight: 900;
+      padding: 14px;
+      border: 0;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .payfast button:hover {
+      background: var(--gold2);
+    }
+
+    .payfast small {
+      display: block;
+      text-align: center;
+      color: var(--muted);
+      margin-top: 8px;
+      font-size: 12px;
+    }
+
+    .paid-note {
+      margin-top: 12px;
+      font-size: 13px;
+    }
+
+    .section {
+      margin: 28px 0;
+    }
+
+    .section h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+    }
+
+    .qrbox {
+      background: var(--card2);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px;
+    }
+
+    .qrbox-note {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: #071018;
+      color: #fff;
+      margin: 6px 0 12px;
+      font: inherit;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .form-submit {
+      margin-top: 6px;
+    }
+
+    .mall-note {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .popia-note {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 20px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer p {
+      margin: 6px 0;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid var(--line);
+      margin: 26px 0;
+    }
+  </style>
 </head>
 <body>
-
-<header class="top">
-  <div class="container header-inner">
-    <a href="./" class="logo-row" aria-label="Barahbasha home">
-      <img class="logo-img" src="/barahbasha-logo-512.png" alt="Barahbasha logo — crowned lion" width="52" height="52">
-      <span class="logo">BARAH<b>BASHA</b></span>
-    </a>
-    <nav aria-label="Main navigation" class="nav">
-      <a class="pill" href="#services">Audits &amp; Packages</a>
-      <a class="pill" href="#complimentary-qr-stand">Free QR Stand</a>
-      <a class="pill gold" href="#mall-car">Mall Car — Idea Stage</a>
-      <a class="pill" href="#community">Community</a>
-      <a class="pill" href="#faq">FAQ</a>
-      <a class="pill" href="#privacy">Privacy</a>
-      <a class="pill" href="#opt-out">Opt Out</a>
-      <a class="pill green" href="https://chat.whatsapp.com/KKTkQ3Fk8QPCybUeX3Dgho">Join Community</a>
-    </nav>
-  </div>
-</header>
-
-<main class="container">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-tag">R199 Preliminary Audit &bull; R399 Live Audit &bull; R5,990 Full Setup &bull; R99/month Review Watch &bull; Mall Car — Idea Stage</div>
-    <h1>Improve how <span>your business</span><br>shows up on local Google searches.</h1>
-    <p class="hero-lead">I'm Dustin at Barahbasha. I help local businesses fix Google Business Profile gaps, get more reviews, and make it easier for nearby customers to find them. No ranking guarantee — we fix what you can control, and show you the proof.</p>
-    <p class="hero-disclaimer">Barahbasha is independent and not affiliated with Google. Google is a trademark of Google LLC.</p>
-    <div class="hero-actions">
-      <a class="btn btn-blue" href="#services">Pick an Audit</a>
-      <a class="btn btn-gold" href="https://chat.whatsapp.com/KKTkQ3Fk8QPCybUeX3Dgho">Join Community — Mall Car Updates</a>
-      <a class="btn btn-dark" href="#mall-car">Mall Car — Idea Stage</a>
-    </div>
-    <div class="chips">
-      <span class="chip">R199 Preliminary Audit</span>
-      <span class="chip">R399 Live Audit</span>
-      <span class="chip">Google Business Profile</span>
-      <span class="chip">Complimentary QR Stand</span>
-      <span class="chip">Mall Car — Idea Stage</span>
-    </div>
-  </section>
-
-  <!-- SERVICES & PRICING -->
-  <section class="section" id="services" aria-labelledby="services-h">
-    <div class="section-header">
-      <h2 id="services-h">Services &amp; Prices — Clear, No Surprises</h2>
-      <p class="lead">Start small, upgrade when you're ready. <a href="#terms" class="text-link">See Terms</a> for what you receive and what happens if delivery is delayed. Turnaround: audits are delivered within 24 hours. If we've already contacted you about your listing, we aim to deliver within the hour.</p>
-    </div>
-
-    <div class="grid-2">
-      <div class="card">
-        <div>
-          <span class="badge">Tier 1 &bull; Most Popular</span>
-          <h3>Preliminary Audit</h3>
-          <div class="price">R199 <small>once-off</small></div>
-          <ul class="check-list">
-            <li>7-point Profit Leak Audit of your Google listing</li>
-            <li>What's missing, what's wrong, what to fix first</li>
-            <li>PDF report — do it yourself, step by step</li>
-            <li>Check of competitors within 5km — what they do better, not a guarantee to outrank them</li>
-          </ul>
-        </div>
-        <div class="card-footer">
-          <a class="btn btn-dark" href="https://wa.me/27713793251?text=I%20want%20Preliminary%20Audit%20R199">Get Preliminary Audit</a>
-          <p class="note">No refunds on Tier 1 — see <a href="#terms" class="text-link-dark">Terms</a>. Delivered within 24 hours, or within the hour if we've already contacted you.</p>
-        </div>
+  <div class="wrap">
+    <header>
+      <img src="barahbasha-logo-512.png" alt="Barahbasha logo" onerror="this.style.display='none'">
+      <div>
+        <h1>BARAHBASHA</h1>
+        <p><span class="tagline">we see what others miss</span> &bull; Any business, any size, anywhere in South Africa &mdash; shop, home-based, online, or mobile.</p>
       </div>
+    </header>
 
-      <div class="card gold-border">
-        <div>
-          <span class="badge">Tier 1 &bull; Live</span>
-          <h3>Live Audit</h3>
-          <div class="price">R399 <small>once-off</small></div>
-          <ul class="check-list">
-            <li>Everything in Preliminary Audit</li>
-            <li>Live walkthrough on WhatsApp / call with you</li>
-            <li>We show you your listing vs your competitor, live</li>
-            <li>Your questions answered on the spot</li>
-          </ul>
+    <main>
+      <section class="hero" aria-label="Introduction">
+        <h2>Your Google listing is losing you customers you never see.</h2>
+        <p>We check it properly &mdash; reviews, photos, hours, categories, and what your neighbours are doing &mdash; then tell you exactly what to fix. No cold calls. No hype. No lock-in.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#audit">Get Preliminary Audit &mdash; R199</a>
+          <a class="btn btn-ghost" href="#qr-stand">Get Complimentary QR Stand</a>
         </div>
-        <div class="card-footer">
-          <a class="btn btn-gold" href="https://wa.me/27713793251?text=I%20want%20Live%20Audit%20R399">Book Live Audit</a>
-          <p class="note">No refunds on Tier 1 — see <a href="#terms" class="text-link-dark">Terms</a>. Delivered within 24 hours, or within the hour if we've already contacted you.</p>
-        </div>
-      </div>
+        <p class="hero-contact">Email: marketing@barahbasha.co.za &bull; WhatsApp: 071 379 3251 &bull; Port Elizabeth, South Africa</p>
+      </section>
 
-      <div class="card gold-border">
-        <div>
-          <span class="badge">Full Done-For-You</span>
-          <h3>Full Setup</h3>
-          <div class="price">R5,990 <small>once-off</small></div>
-          <ul class="check-list">
-            <li>We set up / fix your full Google Business Profile</li>
-            <li>Photos, hours, categories, services, description</li>
-            <li>QR Review Stand included</li>
-            <li>Review Watch first month included</li>
-            <li>Timing: 3–5 working days after you give us access + photos</li>
-            <li>Access needed: Manager access to your Google Business Profile (we never ask for your Google password)</li>
-          </ul>
-        </div>
-        <div class="card-footer">
-          <a class="btn btn-dark" href="https://wa.me/27713793251?text=I%20want%20Full%20Setup%20R5990">Get Full Setup</a>
-          <p class="note">We cannot guarantee rankings. We fix your listing so Google can show it correctly.</p>
-        </div>
-      </div>
+      <section class="section" id="audit" aria-labelledby="audit-heading">
+        <h2 id="audit-heading">Choose your audit</h2>
+        <div class="grid">
+          <!-- R199 CARD WITH PAYFAST -->
+          <article class="card card--featured">
+            <span class="badge badge-gold">Most Popular &bull; Tier 1</span>
+            <h3>Preliminary Audit</h3>
+            <p>7-point Profit Leak Audit for your Google Business Profile. Done within the hour once we have your details. DIY fixes you can do yourself.</p>
+            <div class="price">R199</div>
+            <p><strong>No refunds on Tier 1.</strong></p>
+            <ul>
+              <li>Google Business Profile check &mdash; ranking, categories, hours, photos</li>
+              <li>Reviews &mdash; count, rating, gaps vs nearby businesses within 5km</li>
+              <li>7-point Profit Leak list &mdash; what to fix first</li>
+              <li>DIY guidance &mdash; you fix it, or ask us to do it</li>
+              <li>5km competitor protection on this audit</li>
+            </ul>
+            <div class="payfast">
+              <!-- PayFast — Preliminary Audit R199 — Receiver 37123719 -->
+              <form name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
+                <input type="hidden" name="cmd" value="_paynow">
+                <input type="hidden" name="receiver" value="37123719">
+                <input type="hidden" name="amount" value="199.00">
+                <input type="hidden" name="item_name" value="Preliminary Audit - Barahbasha">
+                <input type="hidden" name="item_description" value="7-point Profit Leak Audit for Google Business Profile">
+                <input type="hidden" name="return_url" value="https://barahbasha.co.za/thank-you.html">
+                <input type="hidden" name="cancel_url" value="https://barahbasha.co.za/">
+                <input type="hidden" name="email_confirmation" value="1">
+                <input type="hidden" name="confirmation_address" value="marketing@barahbasha.co.za">
+                <button type="submit">Pay R199 with PayFast &mdash; Secure Checkout</button>
+              </form>
+              <small>Secure payment via PayFast &bull; No refunds on Tier 1 &bull; Audit ready within the hour once we have your details</small>
+            </div>
+            <p class="paid-note">Already paid? Email <a href="mailto:marketing@barahbasha.co.za">marketing@barahbasha.co.za</a> with your Business Name + Owner Name.</p>
+          </article>
 
-      <div class="card green-border">
-        <div>
-          <span class="badge green">New &bull; Monthly &bull; Recurring</span>
-          <h3>Review Watch</h3>
-          <div class="price">R99 <small>/ month</small></div>
-          <ul class="check-list">
-            <li>We check your Google reviews every week</li>
-            <li>If you get a 1 or 2-star review, we draft a polite reply for you</li>
-            <li>You approve it before anything is sent</li>
-            <li>We never auto-reply without your OK</li>
-            <li>Cancel anytime — no contract</li>
-          </ul>
-        </div>
-        <div class="card-footer">
-          <a class="btn btn-green" href="https://wa.me/27713793251?text=I%20want%20Review%20Watch%20R99%2Fmonth">Get Review Watch</a>
-          <p class="note">Only for businesses who said YES. We never message cold businesses about their reviews. If you get no bad review that week, we say nothing — no spam.</p>
-        </div>
-      </div>
-    </div>
+          <article class="card">
+            <span class="badge">Tier 2</span>
+            <h3>Live Audit</h3>
+            <p>We walk through your listing live with you and fix the quick wins together.</p>
+            <div class="price">R399</div>
+            <ul>
+              <li>Everything in Preliminary Audit</li>
+              <li>Live screen-share walkthrough</li>
+              <li>Fix categories, hours, photos on the call</li>
+              <li>Next-step plan for reviews</li>
+            </ul>
+            <a class="btn card-cta" href="mailto:marketing@barahbasha.co.za?subject=Live%20Audit%20R399%20-%20Barahbasha">Book Live Audit &mdash; R399</a>
+          </article>
 
-    <!-- 7-POINT AUDIT SAMPLE & REVIEW WATCH STEPS -->
-    <div class="grid-2" style="margin-top: 18px;">
-      <div class="box">
-        <h3>What is the 7-Point Audit?</h3>
-        <p style="margin: 8px 0; font-size: 14px;">1. Business name &amp; category &nbsp;&bull;&nbsp; 2. Address &amp; map pin &nbsp;&bull;&nbsp; 3. Hours &amp; phone &nbsp;&bull;&nbsp; 4. Website link &nbsp;&bull;&nbsp; 5. Photos &nbsp;&bull;&nbsp; 6. Services / description &nbsp;&bull;&nbsp; 7. Reviews &amp; Q&amp;A</p>
-        <p style="margin: 8px 0; font-size: 14px;">You get a score for each point, what to fix, and how to fix it. See a sample below.</p>
-        <div class="sample">
-          <b>SAMPLE — Redacted Audit PDF (what you get for R199)</b><br>
-          Business: [Redacted] — Salon, Summerstrand<br>
-          1. Category: ✓ Correct — Hair Salon<br>
-          2. Hours: ✗ Missing Sunday hours<br>
-          3. Photos: ✗ Only 2 photos, no shopfront photo<br>
-          4. Reviews: 12 reviews, 4.1 stars — 2 unanswered 1-star reviews<br>
-          5. Map pin: ✓ Correct<br>
-          6. Website: ✗ No website link<br>
-          7. Description: ✗ Missing — no services listed<br>
-          <b>Fix first:</b> Add website link + shopfront photo + reply to 2 bad reviews. Full PDF has step-by-step screenshots.
+          <article class="card">
+            <span class="badge">Tier 3</span>
+            <h3>Full Setup</h3>
+            <p>We set up / rebuild your Google Business Profile properly for you.</p>
+            <div class="price">R5,990</div>
+            <ul>
+              <li>Full Google Business Profile setup / rebuild</li>
+              <li>Photos, categories, services, description</li>
+              <li>Review system + QR stand included</li>
+              <li>Handover checklist</li>
+            </ul>
+            <a class="btn card-cta" href="mailto:marketing@barahbasha.co.za?subject=Full%20Setup%20R5990%20-%20Barahbasha">Enquire &mdash; Full Setup</a>
+          </article>
+
+          <article class="card">
+            <span class="badge">Monthly</span>
+            <h3>Review Watch</h3>
+            <p>We watch your reviews so you never miss one.</p>
+            <div class="price">R99 <span class="price-unit">/month</span></div>
+            <ul>
+              <li>New review alerts</li>
+              <li>Monthly review summary</li>
+              <li>Reply suggestions</li>
+              <li>Cancel anytime</li>
+            </ul>
+            <a class="btn card-cta" href="mailto:marketing@barahbasha.co.za?subject=Review%20Watch%20R99%20-%20Barahbasha">Start Review Watch &mdash; R99/mo</a>
+          </article>
         </div>
-      </div>
+      </section>
 
-      <div class="box">
-        <h3>How Review Watch Works — In 3 Steps</h3>
-        <ol class="steps-list">
-          <li><strong>You join:</strong> Claim your QR stand or buy an audit, then say YES to Review Watch on WhatsApp.</li>
-          <li><strong>We watch:</strong> Every Monday we check your Google listing. If a new 1 or 2-star review appears, we write a calm, professional draft reply for you.</li>
-          <li><strong>You approve:</strong> We WhatsApp you the draft. You say "post it" or "change it". Nothing goes live without you.</li>
-        </ol>
-        <div class="sample">
-          <b>Example WhatsApp Draft:</b><br>
-          "You got a 1-star from Thandi about waiting times. Here's a reply you can use: <em>'Hi Thandi, sorry about the wait, we've fixed our booking system…'</em>" — You copy-paste, or we post it for you if you have Full Setup.
-        </div>
-      </div>
-    </div>
-  </section>
+      <hr>
 
-  <!-- COMPLIMENTARY QR STAND -->
-  <section class="section" id="complimentary-qr-stand" aria-labelledby="qr-h">
-    <div class="box gold">
-      <span class="badge">Complimentary &bull; No Obligation</span>
-      <h2 id="qr-h" style="font-size: 26px; margin-bottom: 8px;">Complimentary QR Review Stand</h2>
-      <p style="font-size: 15px;">Any business, any size, anywhere in South Africa. Shop, home, online, or mobile. Print it or show it on your phone.</p>
-      <p style="margin: 10px 0; font-size: 14px;"><b>How it works:</b> Choose how you want your stand. If you choose Email, we need your email. If you choose WhatsApp, we need your phone. Suburb and category are optional. If you paste your Google Review Link, we build your stand faster. We only send your stand + one follow-up by the method you chose. Or join the community and ask for it there.</p>
-
-      <form id="qr-form" action="https://docs.google.com/forms/d/e/1FAIpQLSddqdsWnlytm5eXyyl5HXC63Db1i1mmwNyzr3Kn7Btvq_877w/formResponse" method="POST" target="qr-hidden">
-        <div class="form-grid">
-          <div>
-            <label for="qr-method">How do you want your stand? *</label>
-            <select id="qr-method" name="entry.1945722886" required>
-              <option value="">Choose one…</option>
-              <option value="Email">Email</option>
+      <section class="section" id="qr-stand" aria-labelledby="qr-heading">
+        <h2 id="qr-heading">Complimentary QR Review Stand</h2>
+        <div class="qrbox">
+          <p>Free to claim on site. We print a QR stand for your counter so customers can leave a Google review in seconds. <strong>Complimentary</strong> &mdash; no purchase needed to claim it.</p>
+          <p class="qrbox-note">Fill this in and we will build your stand. We only use your details to build and send your stand, and to contact you about it. You can opt out anytime.</p>
+          <!-- QR Stand Consent Form — Form ID 1FAIpQLSddqdsWnlytm5eXyyl5HXC63Db1i1mmwNyzr3Kn7Btvq_877w -->
+          <form action="https://docs.google.com/forms/d/e/1FAIpQLSddqdsWnlytm5eXyyl5HXC63Db1i1mmwNyzr3Kn7Btvq_877w/formResponse" method="post" target="_blank" rel="noopener">
+            <label for="hear-about">How did you hear about us?</label>
+            <select id="hear-about" name="entry.1945722886" required>
+              <option value="">Choose&hellip;</option>
+              <option value="Walk-in">Walk-in</option>
               <option value="WhatsApp">WhatsApp</option>
+              <option value="Google">Google</option>
+              <option value="Referral">Referral</option>
+              <option value="Other">Other</option>
             </select>
-            <p id="qr-method-hint" class="fine">Choose Email or WhatsApp above — then fill only that contact field.</p>
-          </div>
 
-          <div>
-            <label for="qr-biz">Business Name *</label>
-            <input id="qr-biz" type="text" name="entry.1756108162" placeholder="Your Business Name" required autocomplete="organization">
-          </div>
+            <label for="user-email">Your Email</label>
+            <input id="user-email" name="entry.1063352566" type="email" required placeholder="you@yourbusiness.co.za">
 
-          <div>
-            <label for="qr-email">Your Email <span id="qr-email-req">(required if you chose Email)</span></label>
-            <input id="qr-email" type="email" name="entry.1063352566" placeholder="you@yourbusiness.co.za" autocomplete="email">
-          </div>
+            <label for="business-name">Business Name</label>
+            <input id="business-name" name="entry.1756108162" type="text" required placeholder="Your business name">
 
-          <div>
-            <label for="qr-phone">Phone / WhatsApp <span id="qr-phone-req">(required if you chose WhatsApp)</span></label>
-            <input id="qr-phone" type="tel" name="entry.1841398547" placeholder="071 000 0000" autocomplete="tel">
-          </div>
+            <label for="phone-whatsapp">Phone / WhatsApp</label>
+            <input id="phone-whatsapp" name="entry.1841398547" type="tel" placeholder="071 000 0000">
 
-          <div>
-            <label for="qr-suburb">Suburb (optional)</label>
-            <input id="qr-suburb" type="text" name="entry.1179244065" placeholder="e.g. Summerstrand" autocomplete="address-level2">
-          </div>
+            <label for="suburb">Suburb</label>
+            <input id="suburb" name="entry.1179244065" type="text" placeholder="e.g. Summerstrand">
 
-          <div>
-            <label for="qr-cat">Category (optional)</label>
-            <input id="qr-cat" type="text" name="entry.1538113811" placeholder="e.g. Salon, Guesthouse, Spaza">
-          </div>
+            <label for="category">Category</label>
+            <input id="category" name="entry.1538113811" type="text" placeholder="e.g. Salon, Cafe, Guesthouse">
 
-          <div class="form-full">
-            <label for="qr-review-link">Your Google Review Link (if you have it, optional)</label>
-            <input id="qr-review-link" type="url" name="entry.906675983" placeholder="https://g.page/r/...">
-            <p class="fine">Find it in Google: Search your business → Click your listing → Get more reviews → Copy link. Leave blank if you don't have it, we'll find it for you.</p>
-          </div>
+            <label for="review-link">Your Google Review Link (g.page link)</label>
+            <input id="review-link" name="entry.906675983" type="url" placeholder="https://g.page/&hellip;">
 
-          <div class="form-full">
-            <label for="qr-consent">Can we send you your stand + one follow-up? *</label>
-            <select id="qr-consent" name="entry.1713103939" required>
-              <option value="">Choose one…</option>
-              <option value="Yes">Yes — send my stand</option>
+            <label for="consent">Can we send you your QR stand and audit info?</label>
+            <select id="consent" name="entry.1713103939" required>
+              <option value="">Choose&hellip;</option>
+              <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
-            <p id="qr-no-error" class="error">If you choose "No", we can't send your stand — because that would mean contacting you without permission. Choose "Yes" to get your stand, or use Opt Out below if you don't want any contact.</p>
-          </div>
 
-          <div class="form-full">
-            <button class="btn btn-gold" type="submit">Claim My Complimentary Stand</button>
-            <div id="qr-success" class="success" role="status">Thanks! Your stand request was sent. Check your email or WhatsApp — we send stands within 24 hours. If you chose Email, check Spam too.</div>
-            <p class="fine">By submitting you agree to receive your stand + one follow-up by the method you chose. We never sell your details. See <a href="#privacy" class="text-link-dark">Privacy</a>. Opt out in 1 click below. Or <a href="https://chat.whatsapp.com/KKTkQ3Fk8QPCybUeX3Dgho" class="text-link-dark">join the community</a> and ask there.</p>
-          </div>
+            <button class="btn form-submit" type="submit">Claim My Complimentary QR Stand</button>
+          </form>
         </div>
-      </form>
-      <iframe name="qr-hidden" style="display:none;" title="QR form submission"></iframe>
-    </div>
-  </section>
+      </section>
 
-  <!-- MALL CAR - IDEA STAGE -->
-  <section class="section" id="mall-car" aria-labelledby="mall-car-h">
-    <div class="box dark">
-      <span class="badge blue">Mall Car — Idea Stage — No Car Yet — Interest Only</span>
-      <h2 id="mall-car-h" style="font-size: 26px; margin-bottom: 10px;">Could A Car In The Mall Grow Your Business?</h2>
-      <p style="color: var(--text-muted); margin-bottom: 12px;">We’re exploring an idea. No car yet. No mall booked. No date. No payment now. We’re just checking if enough businesses in ONE area would be interested.</p>
-      <p style="color: #cbd5e1; margin-bottom: 6px;"><b>The idea, if it happens:</b></p>
-      <ol class="steps-list" style="color: #cbd5e1;">
-        <li>A car would be displayed inside a shopping mall, wrapped in branding from local businesses in one area.</li>
-        <li>Shoppers would scan YOUR QR code on the car, enter their email to get YOUR deal (sale / discount / free service).</li>
-        <li>Shopper would come to your store, assistant redeems the QR → shopper would get 1 entry into a possible draw.</li>
-        <li>You would get the email lead + the foot traffic. We would handle the car + mall + draw, if it goes ahead.</li>
-      </ol>
-      <p style="color: #cbd5e1; margin: 12px 0;"><b>“Brought to you by” spot:</b> If it goes ahead, the biggest spot on the car would be auctioned to one business. Barahbasha is not taking it — we would run the campaign, you would get the awareness.</p>
-      <p style="color: var(--text-muted); margin: 12px 0;"><b>Interest Check:</b> We need a certain number of interested businesses in one area to even look at making it real. Join the community and tell us you're interested — that's where we’ll announce if any area gets enough interest to explore further. Saying you’re interested is not a booking, not a payment, and not an entry into any draw — because there is no draw yet.</p>
-      <div class="btn-stack">
-        <a class="btn btn-gold" href="https://chat.whatsapp.com/KKTkQ3Fk8QPCybUeX3Dgho">Join Community — I’m Interested In The Idea</a>
-        <a class="btn btn-dark" href="https://wa.me/27713793251?text=I%20am%20interested%20in%20the%20Mall%20Car%20idea">Or WhatsApp Dustin Directly</a>
-      </div>
-      <p class="fine">No payment now. No car yet. No draw yet. This is interest only. We will only explore an area further once enough businesses in that vicinity say YES to the idea.</p>
-    </div>
-  </section>
+      <hr>
 
-  <!-- COMMUNITY -->
-  <section class="section" id="community" aria-labelledby="community-h">
-    <div class="box dark green-border">
-      <span class="badge green">WhatsApp Community — Free To Join</span>
-      <h2 id="community-h" style="font-size: 26px; margin-bottom: 10px;">Join The Barahbasha Community</h2>
-      <p style="color: #cbd5e1; margin-bottom: 10px;">This is where we run everything now — Mall Car idea updates, Google tips, QR stands, Review Watch help. No spam. No cold selling to other members.</p>
-      <p style="color: var(--text-muted); margin-bottom: 16px;">When you join, introduce yourself: <strong>Business Name + Suburb + What you sell</strong>. For Mall Car idea, also say which area you trade in.</p>
-      <a class="btn btn-green" href="https://chat.whatsapp.com/KKTkQ3Fk8QPCybUeX3Dgho">Join The Barahbasha Community</a>
-      <p class="fine">Opt out anytime — leave the community, we won't message you again.</p>
-    </div>
-  </section>
-
-  <!-- WHY BARAHBASHA & CONTACT -->
-  <section class="section" aria-labelledby="why-h">
-    <div class="grid-2">
-      <div class="box">
-        <h2 id="why-h" style="font-size: 24px; margin-bottom: 8px;">Why Barahbasha?</h2>
-        <p style="font-size: 14px; margin-bottom: 10px;">Most businesses lose customers because Google can't find them — wrong category, missing hours, no photos, no reviews. We see what others miss. We check 7 points, fix what matters, and show you the proof.</p>
-        <ul class="check-list" style="margin-bottom: 0;">
-          <li>1 suburb per week, 50 businesses max — not spam</li>
-          <li>Human approves every draft — nothing auto-publishes</li>
-          <li>POPIA-aware — only YES businesses get marketing emails, see Privacy below</li>
-          <li>Based in Gqeberha, serving all of South Africa</li>
-        </ul>
-      </div>
-
-      <div class="box dark">
-        <h2 style="font-size: 24px; margin-bottom: 10px;">Contact Barahbasha</h2>
-        <p style="color: #cbd5e1; font-size: 15px; line-height: 1.8; margin-bottom: 16px;">
-          <strong>Owner:</strong> Dustin Maleiba<br>
-          <strong>WhatsApp:</strong> <a href="tel:+27713793251" class="text-link">071 379 3251</a><br>
-          <strong>Email:</strong> <a href="mailto:dustin@barahbasha.co.za" class="text-link">dustin@barahbasha.co.za</a><br>
-          <strong>Web:</strong> barahbasha.co.za<br>
-          <strong>Area:</strong> Summerstrand, Gqeberha
-        </p>
-        <div class="btn-stack">
-          <a class="btn btn-green" href="https://chat.whatsapp.com/KKTkQ3Fk8QPCybUeX3Dgho">Join Community</a>
-          <a class="btn btn-dark" href="mailto:dustin@barahbasha.co.za">Email Dustin</a>
+      <section class="section" id="mall-car" aria-labelledby="mall-car-heading">
+        <h2 id="mall-car-heading">Mall Car &mdash; Idea Stage Only</h2>
+        <div class="card">
+          <p><strong>This is an idea, not a live draw.</strong> There is no car yet, no mall confirmed, no date, no payment, and no draw yet. We are testing interest only.</p>
+          <p>Idea: Barahbasha buys a car. Businesses buy branding space on it with their own QR. Shoppers scan, enter email for a deal, redeem in store, and get a draw entry. One &ldquo;Brought to you by&rdquo; spot to be auctioned later. Barahbasha does not want brand awareness from this &mdash; the car is for the businesses on it.</p>
+          <p class="mall-note">Interested? Tell us on the walk sheet or email <a href="mailto:marketing@barahbasha.co.za">marketing@barahbasha.co.za</a>. We will only contact you if this moves past idea stage.</p>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- FAQ -->
-  <section class="section" id="faq" aria-labelledby="faq-h">
-    <div class="section-header">
-      <h2 id="faq-h">FAQ</h2>
-    </div>
-    <details>
-      <summary>What is Review Watch? Is it auto-replying?</summary>
-      <p>No. Review Watch checks your Google reviews every week. If you get a bad review, we draft a polite reply and WhatsApp it to you. You approve it before anything is posted. We never auto-reply.</p>
-    </details>
-    <details>
-      <summary>Do you DM cold businesses about their bad reviews?</summary>
-      <p>No. Never. We only watch reviews for businesses who said YES — claimed a QR stand, bought an audit, or bought Full Setup.</p>
-    </details>
-    <details>
-      <summary>Can I cancel Review Watch?</summary>
-      <p>Yes. Cancel anytime on WhatsApp. No contract. We stop watching the next Monday.</p>
-    </details>
-    <details>
-      <summary>Is the QR stand really complimentary?</summary>
-      <p>Yes. Any business, any size, anywhere in SA. Print it or show it on your phone. No obligation to buy anything. The QR on your stand goes to your Google Review page — not your website — so customers can leave a review in 10 seconds.</p>
-    </details>
-    <details>
-      <summary>Will I rank #1 if I buy Full Setup?</summary>
-      <p>No one can guarantee #1. We fix your listing so Google can show it correctly — categories, hours, photos, reviews, map pin. Rankings depend on Google, competitors, and customer behaviour.</p>
-    </details>
-    <details>
-      <summary>How do I show interest in the Mall Car idea?</summary>
-      <p>Join the community and post: Business Name + Suburb + What deal you'd offer shoppers if it happens. That's it. No payment now. No draw yet. If your area gets enough interest, we'll explore it further and announce next steps in the community.</p>
-    </details>
-    <details>
-      <summary>Is there a car / draw / date for Mall Car?</summary>
-      <p>No. Not yet. No car, no mall booked, no date, no draw. It's an idea we're testing. Saying you're interested does not enter you into any draw.</p>
-    </details>
-    <details>
-      <summary>Does the QR stand take customers to my website or my review page?</summary>
-      <p>Your review page. The QR opens your Google “Write a review” page directly, so customers don't have to find it on your website.</p>
-    </details>
-  </section>
+      <hr>
 
-  <!-- TERMS, PRIVACY & OPT-OUT -->
-  <section class="section legal-stack" aria-label="Terms, Privacy, and Opt-Out">
-    <div class="box" id="terms">
-      <h2 style="font-size: 22px;">Terms — What You Get</h2>
-      <p><b>Preliminary Audit R199 / Live Audit R399 (Tier 1):</b> You get a PDF audit + fix list. No refunds on Tier 1, because the audit is delivered immediately as a digital product. If we fail to deliver within 24 hours (or within the hour if we've already contacted you), message us on WhatsApp and we'll re-deliver or refund that audit — even though Tier 1 is normally no-refund, late delivery is our fault.</p>
-      <p><b>Full Setup R5,990:</b> Delivered in 3–5 working days after you provide Manager access + photos. If you don't provide access within 14 days, we pause the job until you do. No ranking guarantee.</p>
-      <p><b>Review Watch R99/month:</b> Billed monthly. Cancel anytime on WhatsApp — we stop the next Monday. No contract, no cancellation fee.</p>
-      <p><b>Mall Car — Idea Stage:</b> There is no car, no mall booked, no date, and no draw yet. Saying you’re interested is not a booking, not a payment, and not an entry into any draw. If an area gets enough interest, we’ll explore it further and announce next steps in the community. If it goes ahead, the “Brought to you by” spot would be auctioned.</p>
-      <p><b>5km check:</b> We look at competitors within 5km and tell you what they do better (more photos, more reviews, better hours). This is a comparison, not protection and not a guarantee to outrank them.</p>
-    </div>
+      <section class="section" id="community" aria-labelledby="community-heading">
+        <h2 id="community-heading">WhatsApp Community</h2>
+        <p>Join for local business tips, Google listing fixes, and review help. No spam. No cold DMs. You can leave anytime.</p>
+        <a class="btn" href="https://chat.whatsapp.com/KKTkQ3Fk8QPCybUeX3Dgho" target="_blank" rel="noopener">Join WhatsApp Community</a>
+      </section>
 
-    <div class="box" id="privacy">
-      <h2 style="font-size: 22px;">Privacy Notice (POPIA)</h2>
-      <p><b>What we collect:</b> From QR form: your chosen contact method, email and/or phone, business name, suburb + category if you give them, your Google Review Link if you paste it, and your Yes/No consent. From Opt-Out form: email or phone you want suppressed. From audits: your Google listing info you ask us to check. From Community: what you post in the community.</p>
-      <p><b>Who processes it:</b> Google Forms / Google Sheets (where your form answers are stored), GitHub (where our suppression list lives), and WhatsApp (community messages). We don't sell your details. We don't use email-finder tools.</p>
-      <p><b>How long we keep it:</b> QR leads: until you opt out or for 12 months, then deleted. Suppression list: kept indefinitely, so we never contact you again — that's why "never contact you again" works. If you opt out, we keep only your contact on the suppression list, nothing else.</p>
-      <p><b>What we send:</b> Only what you asked for — your QR stand + one follow-up by your chosen method. Audit buyers get their audit. Review Watch subscribers get weekly review drafts. Community members get community updates. No cold DM / email / tag.</p>
-      <p><b>Your rights:</b> Ask us to see, correct, or delete your details, or to opt out — email <a href="mailto:dustin@barahbasha.co.za" class="text-link-dark">dustin@barahbasha.co.za</a> or use Opt Out below. We'll confirm within 5 working days. To leave community updates, leave the community.</p>
-      <p><b>POPIA-aware means:</b> We only email businesses who said YES, we honour suppression, and opt-out is 1 click. It does not mean Google guarantees anything.</p>
-    </div>
+      <hr>
 
-    <div class="box red-border" id="opt-out">
-      <span class="badge red">POPIA &bull; Opt Out In 1 Click</span>
-      <h2 style="font-size: 22px; margin-bottom: 6px;">Don't Want Messages From Us? Opt Out Here.</h2>
-      <p>Enter your email or phone below. We'll add you to our suppression list and never contact you again for marketing. We keep only that contact on the suppression list so we can honour it — see Privacy above. To stop community messages, leave the community.</p>
-      <form id="optout-form" action="https://docs.google.com/forms/d/e/1FAIpQLSeESozZQemrHmPCNsUtmbD6E22wRAmMJ21EIqPLPLNgJ0SDVg/formResponse" method="POST" target="optout-hidden">
-        <label for="optout-contact">Email or Phone to Opt Out *</label>
-        <input id="optout-contact" type="text" name="entry.630885168" placeholder="you@yourbusiness.co.za or 071 000 0000" required autocomplete="email">
-        <button class="btn btn-dark" style="margin-top: 10px;" type="submit">Opt Me Out — Never Contact Me Again</button>
-        <div id="optout-success" class="success" role="status">Done. You've been added to our suppression list. We won't contact you again for marketing. If you get a message after 48 hours, forward it to dustin@barahbasha.co.za and we'll fix it.</div>
-        <p class="fine">After you submit, you'll see a confirmation right here on this page. No new tab. Form also at: <a href="https://forms.gle/MnkYJwKrze1kMuw1A" class="text-link-dark">forms.gle/MnkYJwKrze1kMuw1A</a></p>
-      </form>
-      <iframe name="optout-hidden" style="display:none;" title="Opt-out form submission"></iframe>
-    </div>
-  </section>
+      <section class="section" id="opt-out" aria-labelledby="opt-out-heading">
+        <h2 id="opt-out-heading">Opt out</h2>
+        <p class="mall-note">Don&rsquo;t want emails from us? Opt out in seconds. We will suppress your email and not contact you again.</p>
+        <a class="btn btn-ghost" href="https://forms.gle/MnkYJwKrze1kMuw1A" target="_blank" rel="noopener">Opt Out &mdash; forms.gle/MnkYJwKrze1kMuw1A</a>
+        <p class="popia-note">POPIA: We only contact businesses who gave consent, or who asked for a QR stand / audit. You can opt out anytime and we will remove you from future contact.</p>
+      </section>
+    </main>
 
-</main>
-
-<footer>
-  <div class="container">
-    <img class="footer-logo" src="/barahbasha-logo-256.png" alt="Barahbasha logo — crowned lion" width="68" height="68">
-    <p><strong style="color: #fff;">BARAHBASHA</strong> — MALEIBA (Pty) Ltd T/A BARAHBASHA Marketing</p>
-    <p>We see what others miss &bull; Gqeberha, South Africa &bull; WhatsApp <a href="tel:+27713793251" class="text-link">071 379 3251</a> &bull; <a href="mailto:dustin@barahbasha.co.za" class="text-link">dustin@barahbasha.co.za</a></p>
-    <div class="footer-links">
-      <a href="https://chat.whatsapp.com/KKTkQ3Fk8QPCybUeX3Dgho">Join Community</a>
-      <a href="#opt-out">Opt Out</a>
-      <a href="#privacy">Privacy</a>
-      <a href="#terms">Terms</a>
-      <a href="#complimentary-qr-stand">Complimentary QR Stand</a>
-      <a href="#services">Services</a>
-    </div>
-    <p style="margin-top: 10px;">© 2026 Barahbasha. Independent, not affiliated with Google. Only YES businesses get emails. No cold DM / email / tag. Mall Car is an idea only — no car, no draw, no date yet.</p>
+    <footer>
+      <p><strong>BARAHBASHA</strong> &mdash; MALEIBA (Pty) Ltd T/A BARAHBASHA marketing &bull; Port Elizabeth, South Africa</p>
+      <p>Email: <a href="mailto:marketing@barahbasha.co.za">marketing@barahbasha.co.za</a> &bull; WhatsApp: 071 379 3251 &bull; Website: barahbasha.co.za</p>
+      <p>we see what others miss &bull; <a href="https://forms.gle/MnkYJwKrze1kMuw1A" target="_blank" rel="noopener">Opt out</a> &bull; <a href="https://barahbasha.co.za/thank-you.html">Thank you page</a></p>
+    </footer>
   </div>
-</footer>
-
-<script>
-  const methodEl = document.getElementById('qr-method');
-  const emailEl = document.getElementById('qr-email');
-  const phoneEl = document.getElementById('qr-phone');
-  const consentEl = document.getElementById('qr-consent');
-  const noErr = document.getElementById('qr-no-error');
-  const qrForm = document.getElementById('qr-form');
-
-  function updateQRRequired() {
-    const m = methodEl.value;
-    if (m === 'Email') {
-      emailEl.required = true;
-      phoneEl.required = false;
-    } else if (m === 'WhatsApp') {
-      phoneEl.required = true;
-      emailEl.required = false;
-    } else {
-      emailEl.required = false;
-      phoneEl.required = false;
-    }
-    document.getElementById('qr-email-req').textContent = m === 'Email' ? '(required)' : '(required if you chose Email)';
-    document.getElementById('qr-phone-req').textContent = m === 'WhatsApp' ? '(required)' : '(required if you chose WhatsApp)';
-  }
-
-  methodEl.addEventListener('change', updateQRRequired);
-  updateQRRequired();
-
-  qrForm.addEventListener('submit', function(e) {
-    if (consentEl.value === 'No') {
-      e.preventDefault();
-      noErr.style.display = 'block';
-      consentEl.focus();
-      return;
-    }
-    noErr.style.display = 'none';
-    setTimeout(function() {
-      document.getElementById('qr-success').style.display = 'block';
-    }, 600);
-  });
-
-  document.getElementById('optout-form').addEventListener('submit', function() {
-    setTimeout(function() {
-      document.getElementById('optout-success').style.display = 'block';
-    }, 600);
-  });
-</script>
-
 </body>
 </html>
- 
